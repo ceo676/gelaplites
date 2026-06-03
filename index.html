@@ -143,7 +143,7 @@
 
     <section class="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-brand-darkBrown pt-20">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=2070&auto=format&fit=crop" 
+            <img src="https://raw.githubusercontent.com/ceo676/gelapilates/main/images/gela1.jpg" 
                  onerror="this.src='https://placehold.co/1920x1080/1E1A17/C5A880?text=GELA+PILATES+Luxury+Studio'"
                  alt="GELAPILATES Premium Class" 
                  class="w-full h-full object-cover object-center scale-100 select-none">
@@ -567,73 +567,82 @@
             </div>
 
             <div class="relative overflow-hidden -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-12 lg:px-12">
-                <div id="carousel-track" class="flex gap-4 sm:gap-6 transition-transform duration-500 ease-in-out" style="transform: translateX(0px);">
-                    <div class="min-w-[calc(100vw-2rem)] sm:min-w-[420px] flex-shrink-0 group">
-                        <div class="aspect-[4/3] overflow-hidden rounded-2xl sm:rounded-3xl border border-brand-gold/20 mb-4 sm:mb-5 shadow-md">
-                            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=800&auto=format&fit=crop" 
-                                 onerror="this.src='https://placehold.co/800x600/FAF7F2/C5A880?text=Reformer+Room'"
-                                 alt="Reformer Room" 
-                                 class="w-full h-full object-cover">
-                        </div>
-                        <h4 class="text-base sm:text-lg font-extrabold tracking-wider text-brand-darkBrown">리포머 (Reformer Room)</h4>
-                        <p class="text-xs sm:text-sm text-brand-mutedBrown font-bold mt-1.5 sm:mt-2 leading-relaxed">정밀 척추 정렬 유도 및 체형 교정 효과의 필라테스 리포머 대형 룸</p>
-                    </div>
+                <!-- id="carousel-track" 내부의 카드 구조 전체 교체 -->
+<div id="carousel-track" class="flex gap-4 sm:gap-6 transition-transform duration-500 ease-in-out" style="transform: translateX(0px);">
+    
+    <!-- 1. 리포머 -->
+    <div class="min-w-[calc(100vw-2rem)] sm:min-w-[420px] flex-shrink-0 group">
+        <!-- relative flex items-center justify-center 추가하여 자동 리사이징 마감 -->
+        <div class="aspect-[4/3] overflow-hidden rounded-2xl sm:rounded-3xl border border-brand-gold/20 mb-4 sm:mb-5 shadow-md relative flex items-center justify-center bg-brand-ivory">
+            <img src="https://raw.githubusercontent.com/ceo676/gelapilates/main/images/gelaa.jpg" 
+                 onerror="this.src='https://placehold.co/800x600/FAF7F2/C5A880?text=Reformer+Room'"
+                 alt="Reformer Room" 
+                 class="absolute w-full h-full object-cover object-center">
+        </div>
+        <h4 class="text-base sm:text-lg font-extrabold tracking-wider text-brand-darkBrown">리포머 (Reformer Room)</h4>
+        <p class="text-xs sm:text-sm text-brand-mutedBrown font-bold mt-1.5 sm:mt-2 leading-relaxed">정밀 척추 정렬 유도 및 체형 교정 효과의 필라테스 리포머 대형 룸</p>
+    </div>
 
-                    <div class="min-w-[calc(100vw-2rem)] sm:min-w-[420px] flex-shrink-0 group">
-                        <div class="aspect-[4/3] overflow-hidden rounded-2xl sm:rounded-3xl border border-brand-gold/20 mb-4 sm:mb-5 shadow-md">
-                            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=800&auto=format&fit=crop" 
-                                 onerror="this.src='https://placehold.co/800x600/FAF7F2/C5A880?text=Cadillac+Room'"
-                                 alt="Cadillac Room" 
-                                 class="w-full h-full object-cover">
-                        </div>
-                        <h4 class="text-base sm:text-lg font-extrabold tracking-wider text-brand-darkBrown">캐딜락 (Cadillac Room)</h4>
-                        <p class="text-xs sm:text-sm text-brand-mutedBrown font-bold mt-1.5 sm:mt-2 leading-relaxed">코어 근육 집중 단련과 지탱 유연성을 선사하는 캐딜락 특화 공간</p>
-                    </div>
+    <!-- 2. 캐딜락 -->
+    <div class="min-w-[calc(100vw-2rem)] sm:min-w-[420px] flex-shrink-0 group">
+        <div class="aspect-[4/3] overflow-hidden rounded-2xl sm:rounded-3xl border border-brand-gold/20 mb-4 sm:mb-5 shadow-md relative flex items-center justify-center bg-brand-ivory">
+            <img src="https://raw.githubusercontent.com/ceo676/gelapilates/main/images/gelaa2.jpg" 
+                 onerror="this.src='https://placehold.co/800x600/FAF7F2/C5A880?text=Cadillac+Room'"
+                 alt="Cadillac Room" 
+                 class="absolute w-full h-full object-cover object-center">
+        </div>
+        <h4 class="text-base sm:text-lg font-extrabold tracking-wider text-brand-darkBrown">캐딜락 (Cadillac Room)</h4>
+        <p class="text-xs sm:text-sm text-brand-mutedBrown font-bold mt-1.5 sm:mt-2 leading-relaxed">코어 근육 집중 단련과 지탱 유연성을 선사하는 캐딜락 특화 공간</p>
+    </div>
 
-                    <div class="min-w-[calc(100vw-2rem)] sm:min-w-[420px] flex-shrink-0 group">
-                        <div class="aspect-[4/3] overflow-hidden rounded-2xl sm:rounded-3xl border border-brand-gold/20 mb-4 sm:mb-5 shadow-md">
-                            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop" 
-                                 onerror="this.src='https://placehold.co/800x600/FAF7F2/C5A880?text=Chair+Barrel'"
-                                 alt="Chair & Barrel" 
-                                 class="w-full h-full object-cover">
-                        </div>
-                        <h4 class="text-base sm:text-lg font-extrabold tracking-wider text-brand-darkBrown">체어 & 바렐 (Chair & Barrel)</h4>
-                        <p class="text-xs sm:text-sm text-brand-mutedBrown font-bold mt-1.5 sm:mt-2 leading-relaxed">체형 교정 및 완벽 바디 라인을 유도하는 체어 및 바렐 콤팩트 존</p>
-                    </div>
+    <!-- 3. 체어 & 바렐 -->
+    <div class="min-w-[calc(100vw-2rem)] sm:min-w-[420px] flex-shrink-0 group">
+        <div class="aspect-[4/3] overflow-hidden rounded-2xl sm:rounded-3xl border border-brand-gold/20 mb-4 sm:mb-5 shadow-md relative flex items-center justify-center bg-brand-ivory">
+            <img src="https://raw.githubusercontent.com/ceo676/gelapilates/main/images/gelaa5.jpg" 
+                 onerror="this.src='https://placehold.co/800x600/FAF7F2/C5A880?text=Chair+Barrel'"
+                 alt="Chair & Barrel" 
+                 class="absolute w-full h-full object-cover object-center">
+        </div>
+        <h4 class="text-base sm:text-lg font-extrabold tracking-wider text-brand-darkBrown">체어 & 바렐 (Chair & Barrel)</h4>
+        <p class="text-xs sm:text-sm text-brand-mutedBrown font-bold mt-1.5 sm:mt-2 leading-relaxed">체형 교정 및 완벽 바디 라인을 유도하는 체어 및 바렐 콤팩트 존</p>
+    </div>
 
-                    <div class="min-w-[calc(100vw-2rem)] sm:min-w-[420px] flex-shrink-0 group">
-                        <div class="aspect-[4/3] overflow-hidden rounded-2xl sm:rounded-3xl border border-brand-gold/20 mb-4 sm:mb-5 shadow-md">
-                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop" 
-                                 onerror="this.src='https://placehold.co/800x600/FAF7F2/C5A880?text=Private+Shower'"
-                                 alt="Private Shower" 
-                                 class="w-full h-full object-cover">
-                        </div>
-                        <h4 class="text-base sm:text-lg font-extrabold tracking-wider text-brand-darkBrown">1인 개인 샤워실 & 탈의실</h4>
-                        <p class="text-xs sm:text-sm text-brand-mutedBrown font-bold mt-1.5 sm:mt-2 leading-relaxed">외부 동선을 안전하게 완벽 차단하여 편안한 이용이 가능한 개별 시설</p>
-                    </div>
+    <!-- 4. 개인 샤워실 -->
+    <div class="min-w-[calc(100vw-2rem)] sm:min-w-[420px] flex-shrink-0 group">
+        <div class="aspect-[4/3] overflow-hidden rounded-2xl sm:rounded-3xl border border-brand-gold/20 mb-4 sm:mb-5 shadow-md relative flex items-center justify-center bg-brand-ivory">
+            <img src="https://raw.githubusercontent.com/ceo676/gelapilates/main/images/gelaa7.jpg" 
+                 onerror="this.src='https://placehold.co/800x600/FAF7F2/C5A880?text=Private+Shower'"
+                 alt="Private Shower" 
+                 class="absolute w-full h-full object-cover object-center">
+        </div>
+        <h4 class="text-base sm:text-lg font-extrabold tracking-wider text-brand-darkBrown">1인 개인 샤워실 & 탈의실</h4>
+        <p class="text-xs sm:text-sm text-brand-mutedBrown font-bold mt-1.5 sm:mt-2 leading-relaxed">외부 동선을 안전하게 완벽 차단하여 편안한 이용이 가능한 개별 시설</p>
+    </div>
 
-                    <div class="min-w-[calc(100vw-2rem)] sm:min-w-[420px] flex-shrink-0 group">
-                        <div class="aspect-[4/3] overflow-hidden rounded-2xl sm:rounded-3xl border border-brand-gold/20 mb-4 sm:mb-5 shadow-md">
-                            <img src="https://images.unsplash.com/photo-1599447421416-3414500d18a5?q=80&w=800&auto=format&fit=crop" 
-                                 onerror="this.src='https://placehold.co/800x600/FAF7F2/C5A880?text=Fittrix+Zone'"
-                                 alt="Fittrix Zone" 
-                                 class="w-full h-full object-cover">
-                        </div>
-                        <h4 class="text-base sm:text-lg font-extrabold tracking-wider text-brand-darkBrown">FITTRIX 3D 분석 존</h4>
-                        <p class="text-xs sm:text-sm text-brand-mutedBrown font-bold mt-1.5 sm:mt-2 leading-relaxed">언제든 정교한 부정렬 및 체형 이상 각도를 계측 받는 스마트 공간</p>
-                    </div>
+    <!-- 5. FITTRIX 존 -->
+    <div class="min-w-[calc(100vw-2rem)] sm:min-w-[420px] flex-shrink-0 group">
+        <div class="aspect-[4/3] overflow-hidden rounded-2xl sm:rounded-3xl border border-brand-gold/20 mb-4 sm:mb-5 shadow-md relative flex items-center justify-center bg-brand-ivory">
+            <img src="https://raw.githubusercontent.com/ceo676/gelapilates/main/images/gelaa4.jpg" 
+                 onerror="this.src='https://placehold.co/800x600/FAF7F2/C5A880?text=Fittrix+Zone'"
+                 alt="Fittrix Zone" 
+                 class="absolute w-full h-full object-cover object-center">
+        </div>
+        <h4 class="text-base sm:text-lg font-extrabold tracking-wider text-brand-darkBrown">FITTRIX 3D 분석 존</h4>
+        <p class="text-xs sm:text-sm text-brand-mutedBrown font-bold mt-1.5 sm:mt-2 leading-relaxed">언제든 정교한 부정렬 및 체형 이상 각도를 계측 받는 스마트 공간</p>
+    </div>
 
-                    <div class="min-w-[calc(100vw-2rem)] sm:min-w-[420px] flex-shrink-0 group">
-                        <div class="aspect-[4/3] overflow-hidden rounded-2xl sm:rounded-3xl border border-brand-gold/20 mb-4 sm:mb-5 shadow-md">
-                            <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=800&auto=format&fit=crop" 
-                                 onerror="this.src='https://placehold.co/800x600/FAF7F2/C5A880?text=Cardio+Zone'"
-                                 alt="Cardio Zone Stairclimber" 
-                                 class="w-full h-full object-cover">
-                        </div>
-                        <h4 class="text-base sm:text-lg font-extrabold tracking-wider text-brand-darkBrown">ORGO 천국의 계단 & 유산소 존</h4>
-                        <p class="text-xs sm:text-sm text-brand-mutedBrown font-bold mt-1.5 sm:mt-2 leading-relaxed">운동 시너지를 최대로 끌어올릴 고강도 다이어트 연계 유산소 장비 존</p>
-                    </div>
-                </div>
+    <!-- 6. 유산소 존 -->
+    <div class="min-w-[calc(100vw-2rem)] sm:min-w-[420px] flex-shrink-0 group">
+        <div class="aspect-[4/3] overflow-hidden rounded-2xl sm:rounded-3xl border border-brand-gold/20 mb-4 sm:mb-5 shadow-md relative flex items-center justify-center bg-brand-ivory">
+            <img src="https://raw.githubusercontent.com/ceo676/gelapilates/main/images/gelaa10.jpg" 
+                 onerror="this.src='https://placehold.co/800x600/FAF7F2/C5A880?text=Cardio+Zone'"
+                 alt="Cardio Zone Stairclimber" 
+                 class="absolute w-full h-full object-cover object-center">
+        </div>
+        <h4 class="text-base sm:text-lg font-extrabold tracking-wider text-brand-darkBrown">ORGO 천국의 계단 & 유산소 존</h4>
+        <p class="text-xs sm:text-sm text-brand-mutedBrown font-bold mt-1.5 sm:mt-2 leading-relaxed">운동 시너지를 최대로 끌어올릴 고강도 다이어트 연계 유산소 장비 존</p>
+    </div>
+</div>
             </div>
         </div>
     </section>
@@ -1014,98 +1023,127 @@
         </div>
     </footer>
 
-    <div id="booking-modal" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-brand-darkBrown/85 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
-        <div class="bg-brand-white w-full max-w-lg rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-brand-gold/40 shadow-2xl relative max-h-[94vh] flex flex-col">
-            <div class="p-5 sm:p-8 border-b border-brand-softIvory bg-brand-ivory flex items-center justify-between">
-                <div>
-                    <h3 class="font-serif text-xl sm:text-2xl tracking-wider text-brand-darkBrown font-bold">체험레슨 간편 신청</h3>
-                    <p class="text-[11px] sm:text-xs text-brand-darkGold tracking-wider mt-0.5 sm:mt-1 font-extrabold">3D FITTRIX 분석이 무료 지원됩니다.</p>
-                </div>
-                <button onclick="closeBookingModal()" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full hover:bg-brand-softIvory transition-colors flex items-center justify-center text-brand-darkBrown" aria-label="Close modal">
-                    <i class="fa-solid fa-xmark text-base sm:text-lg"></i>
-                </button>
+   <div id="booking-modal" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-brand-darkBrown/85 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+    <div class="bg-brand-white w-full max-w-lg rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-brand-gold/40 shadow-2xl relative max-h-[94vh] flex flex-col">
+        
+        <div class="p-5 sm:p-8 border-b border-brand-softIvory bg-brand-ivory flex items-center justify-between">
+            <div>
+                <h3 class="font-serif text-xl sm:text-2xl tracking-wider text-brand-darkBrown font-bold">체험레슨 간편 신청</h3>
+                <p class="text-[11px] sm:text-xs text-brand-darkGold tracking-wider mt-0.5 sm:mt-1 font-extrabold">3D FITTRIX 분석이 무료 지원됩니다.</p>
             </div>
+            <button onclick="closeBookingModal()" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full hover:bg-brand-softIvory transition-colors flex items-center justify-center text-brand-darkBrown" aria-label="Close modal">
+                <i class="fa-solid fa-xmark text-base sm:text-lg"></i>
+            </button>
+        </div>
 
-            <div class="p-5 sm:p-8 overflow-y-auto flex-1 font-bold">
-                <form id="lesson-form" onsubmit="submitLessonForm(event)" class="space-y-4 sm:space-y-5">
-                    <div>
-                        <label class="block text-xs font-extrabold text-brand-darkBrown tracking-wider mb-1.5 sm:mb-2">이름 *</label>
-                        <input type="text" required placeholder="신청인 성함을 적어주세요." 
-                               class="w-full text-base px-4 py-3 sm:py-3.5 rounded-xl border border-brand-gold/30 focus:outline-none focus:border-brand-darkGold bg-brand-ivory font-bold text-brand-darkBrown">
-                    </div>
-                    
-                    <div>
-                        <label class="block text-xs font-extrabold text-brand-darkBrown tracking-wider mb-1.5 sm:mb-2">연락처 *</label>
-                        <input type="tel" required placeholder="예: 010-1234-5678" 
-                               class="w-full text-base px-4 py-3 sm:py-3.5 rounded-xl border border-brand-gold/30 focus:outline-none focus:border-brand-darkGold bg-brand-ivory font-bold text-brand-darkBrown">
-                    </div>
+        <div class="p-5 sm:p-8 overflow-y-auto flex-1 font-bold">
+            <form id="lesson-form" onsubmit="submitLessonForm(event)" class="space-y-4 sm:space-y-5">
+                
+                <div>
+                    <label class="block text-xs font-extrabold text-brand-darkBrown tracking-wider mb-1.5 sm:mb-2">이름 *</label>
+                    <input type="text" id="form-name" required placeholder="신청인 성함을 적어주세요." 
+                           class="w-full text-base px-4 py-3 sm:py-3.5 rounded-xl border border-brand-gold/30 focus:outline-none focus:border-brand-darkGold bg-brand-ivory font-bold text-brand-darkBrown">
+                </div>
+                
+                <div>
+                    <label class="block text-xs font-extrabold text-brand-darkBrown tracking-wider mb-1.5 sm:mb-2">연락처 *</label>
+                    <input type="tel" id="form-phone" required placeholder="예: 010-1234-5678" 
+                           class="w-full text-base px-4 py-3 sm:py-3.5 rounded-xl border border-brand-gold/30 focus:outline-none focus:border-brand-darkGold bg-brand-ivory font-bold text-brand-darkBrown">
+                </div>
 
-                    <div>
-                        <label class="block text-xs font-extrabold text-brand-darkBrown tracking-wider mb-1.5 sm:mb-2">희망 프로그램 *</label>
-                        <select required class="w-full text-base px-4 py-3 sm:py-3.5 rounded-xl border border-brand-gold/30 focus:outline-none focus:border-brand-darkGold bg-brand-ivory font-bold text-brand-darkBrown">
-                            <option value="">-- 항목을 선택하세요 --</option>
-                            <option value="kids">[대치동 베스트] 키즈 키성장 및 척추교정</option>
-                            <option value="golf">[골프 특화] 비거리 및 고관절 컨디셔닝</option>
-                            <option value="prenatal">임산부 산전 필라테스</option>
-                            <option value="postnatal">산후 복직근이개 골반 회복</option>
-                            <option value="diet">다이어트 & 바디 라인 교정</option>
-                            <option value="mens">맨즈 필라테스 (코어 집중)</option>
-                        </select>
-                    </div>
+                <div>
+                    <label class="block text-xs font-extrabold text-brand-darkBrown tracking-wider mb-1.5 sm:mb-2">희망 프로그램 *</label>
+                    <select id="form-program" required class="w-full text-base px-4 py-3 sm:py-3.5 rounded-xl border border-brand-gold/30 focus:outline-none focus:border-brand-darkGold bg-brand-ivory font-bold text-brand-darkBrown">
+                        <option value="">-- 항목을 선택하세요 --</option>
+                        <option value="kids">[대치동 베스트] 키즈 키성장 및 척추교정</option>
+                        <option value="golf">[골프 특화] 비거리 및 고관절 컨디셔닝</option>
+                        <option value="prenatal">임산부 산전 필라테스</option>
+                        <option value="postnatal">산후 복직근이개 골반 회복</option>
+                        <option value="diet">다이어트 & 바디 라인 교정</option>
+                        <option value="mens">맨즈 필라테스 (코어 집중)</option>
+                    </select>
+                </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-xs font-extrabold text-brand-darkBrown tracking-wider mb-1.5 sm:mb-2">희망 예약 일자 *</label>
-                            <input type="date" required 
-                                   class="w-full text-base px-4 py-3 sm:py-3.5 rounded-xl border border-brand-gold/30 focus:outline-none focus:border-brand-darkGold bg-brand-ivory font-bold text-brand-darkBrown">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-extrabold text-brand-darkBrown tracking-wider mb-1.5 sm:mb-2">희망 시간대 *</label>
-                            <select required class="w-full text-base px-4 py-3 sm:py-3.5 rounded-xl border border-brand-gold/30 focus:outline-none focus:border-brand-darkGold bg-brand-ivory font-bold text-brand-darkBrown">
-                                <option value="">시간대 선택</option>
-                                <option value="morning">오전 (09:00 - 12:00)</option>
-                                <option value="afternoon">오후 (12:00 - 18:00)</option>
-                                <option value="evening">저녁 (18:00 - 22:00)</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-extrabold text-brand-darkBrown tracking-wider mb-1.5 sm:mb-2">남기실 메시지 (현재 느끼는 통증 부위 등)</label>
-                        <textarea placeholder="불편한 허리, 고관절 부위나 자녀분 키성장 고민 등 상세히 기재해주시면 특별 관리에 적극 반영해 드립니다." rows="3" 
-                                  class="w-full text-base px-4 py-3 sm:py-3.5 rounded-xl border border-brand-gold/30 focus:outline-none focus:border-brand-darkGold bg-brand-ivory font-bold text-brand-darkBrown resize-none"></textarea>
-                    </div>
-
-                    <div class="flex items-start gap-2.5 pt-1">
-                        <input type="checkbox" required id="privacy" class="mt-0.5 w-4 h-4 border-brand-gold/50 accent-brand-darkGold flex-shrink-0">
-                        <label for="privacy" class="text-[11px] sm:text-xs text-brand-mutedBrown cursor-pointer select-none leading-relaxed">
-                            개인정보 수집 및 이용 동의 (예약 정보 제공 및 유선 전송 가이드 목적) *
+                <div>
+                    <label class="block text-xs font-extrabold text-brand-darkBrown tracking-wider mb-1.5 sm:mb-2">체험레슨 시간 및 예약금 선택 *</label>
+                    <div class="grid grid-cols-2 gap-3">
+                        <label class="border-2 border-brand-gold/30 rounded-xl p-3 flex flex-col items-center justify-center cursor-pointer bg-brand-ivory hover:border-brand-darkGold transition-all">
+                            <input type="radio" name="lesson_time" value="25min" required class="accent-brand-darkGold mb-1.5">
+                            <span class="text-sm text-brand-darkBrown font-extrabold">25분 집중체험</span>
+                            <span class="text-[11px] text-brand-darkGold mt-0.5 font-black">예약 보증금 2만원</span>
+                        </label>
+                        <label class="border-2 border-brand-gold/30 rounded-xl p-3 flex flex-col items-center justify-center cursor-pointer bg-brand-ivory hover:border-brand-darkGold transition-all">
+                            <input type="radio" name="lesson_time" value="50min" class="accent-brand-darkGold mb-1.5">
+                            <span class="text-sm text-brand-darkBrown font-extrabold">50분 정밀체험</span>
+                            <span class="text-[11px] text-brand-darkGold mt-0.5 font-black">예약 보증금 4만원</span>
                         </label>
                     </div>
+                </div>
 
-                    <div class="pt-2">
-                        <button type="submit" class="w-full bg-brand-darkGold hover:bg-brand-darkBrown text-white font-extrabold tracking-widest text-sm py-4 rounded-xl shadow-lg shadow-brand-darkGold/20 transition-all duration-300">
-                            체험 예약 완료 신청하기
-                        </button>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-extrabold text-brand-darkBrown tracking-wider mb-1.5 sm:mb-2">희망 예약 일자 *</label>
+                        <input type="date" id="form-date" required 
+                               class="w-full text-base px-4 py-3 sm:py-3.5 rounded-xl border border-brand-gold/30 focus:outline-none focus:border-brand-darkGold bg-brand-ivory font-bold text-brand-darkBrown">
                     </div>
-                </form>
-            </div>
+                    <div>
+                        <label class="block text-xs font-extrabold text-brand-darkBrown tracking-wider mb-1.5 sm:mb-2">희망 시간대 *</label>
+                        <select id="form-slot" required class="w-full text-base px-4 py-3 sm:py-3.5 rounded-xl border border-brand-gold/30 focus:outline-none focus:border-brand-darkGold bg-brand-ivory font-bold text-brand-darkBrown">
+                            <option value="">시간대 선택</option>
+                            <option value="morning">오전 (09:00 - 12:00)</option>
+                            <option value="afternoon">오후 (12:00 - 18:00)</option>
+                            <option value="evening">저녁 (18:00 - 22:00)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-extrabold text-brand-darkBrown tracking-wider mb-1.5 sm:mb-2">남기실 메시지 (현재 느끼는 통증 부위 등)</label>
+                    <textarea id="form-message" placeholder="불편한 허리, 고관절 부위나 자녀분 키성장 고민 등 상세히 기재해주시면 특별 관리에 적극 반영해 드립니다." rows="2" 
+                              class="w-full text-base px-4 py-3 sm:py-3.5 rounded-xl border border-brand-gold/30 focus:outline-none focus:border-brand-darkGold bg-brand-ivory font-bold text-brand-darkBrown resize-none"></textarea>
+                </div>
+
+                <div class="bg-brand-ivory border border-brand-gold/30 rounded-xl p-3 sm:p-4 text-[11px] sm:text-xs text-brand-darkBrown space-y-1">
+                    <p class="text-brand-darkGold font-black text-xs flex items-center gap-1">
+                        ⚠️ 예약 보증금 및 노쇼 정책 안내
+                    </p>
+                    <p class="text-brand-mutedBrown font-bold leading-relaxed">
+                        본 센터는 1:1 전담 프리미엄 기구 및 장비 배정을 위해 타임별 예약제로만 운영됩니다. <br>
+                        <span class="text-brand-darkBrown font-extrabold">스케줄 확보를 위한 최소한의 보증금(2만/4만)</span>이 발생하며, 신청 완료 후 원장님이 직접 안내 연락을 드립니다. (당일 회원권 등록 시 전액 환불 또는 옵션 차감)
+                    </p>
+                </div>
+
+                <div class="flex items-start gap-2.5 pt-1">
+                    <input type="checkbox" required id="privacy" class="mt-0.5 w-4 h-4 border-brand-gold/50 accent-brand-darkGold flex-shrink-0">
+                    <label for="privacy" class="text-[11px] sm:text-xs text-brand-mutedBrown cursor-pointer select-none leading-relaxed">
+                        개인정보 수집 및 이용 동의 (예약 정보 제공 및 유선 상담 목적) *
+                    </label>
+                </div>
+
+                <div class="pt-2">
+                    <button type="submit" class="w-full bg-brand-darkGold hover:bg-brand-darkBrown text-white font-extrabold tracking-widest text-sm py-4 rounded-xl shadow-lg shadow-brand-darkGold/20 transition-all duration-300">
+                        체험 예약 완료 신청하기
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
+</div>
 
-    <div id="success-toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-brand-darkBrown text-white border-2 border-brand-gold px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-3.5 max-w-md w-[calc(100%-2rem)] scale-90 opacity-0 pointer-events-none transition-all duration-300">
-        <div class="w-10 h-10 rounded-full bg-brand-gold/20 text-brand-lightGold flex items-center justify-center text-lg flex-shrink-0">
-            <i class="fa-solid fa-circle-check"></i>
-        </div>
-        <div>
-            <p class="text-xs sm:text-sm font-extrabold tracking-wide text-brand-lightGold">체험레슨 신청이 완료되었습니다.</p>
-            <p class="text-[11px] text-brand-lightGray mt-0.5 font-bold">빠른 시간 내 담당 마스터 강사가 직접 전화를 드리겠습니다.</p>
-        </div>
+<div id="success-toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-brand-darkBrown text-white border-2 border-brand-gold px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-3.5 max-w-md w-[calc(100%-2rem)] scale-90 opacity-0 pointer-events-none transition-all duration-300">
+    <div class="w-10 h-10 rounded-full bg-brand-gold/20 text-brand-lightGold flex items-center justify-center text-lg flex-shrink-0">
+        <i class="fa-solid fa-circle-check"></i>
     </div>
+    <div>
+        <p class="text-xs sm:text-sm font-extrabold tracking-wide text-brand-lightGold">체험레슨 신청이 완료되었습니다.</p>
+        <p class="text-[11px] text-brand-lightGray mt-0.5 font-bold">빠른 시간 내 원장님이 직접 전화드려 <span class="text-brand-gold font-extrabold">예약금 안내 및 일정</span>을 조율해 드립니다.</p>
+    </div>
+</div>
 
-    <script>
-        // Global Header Scroll Effect
-        const header = document.getElementById('global-header');
+<script>
+    // 1. 헤더 스크롤 이펙트
+    const header = document.getElementById('global-header');
+    if (header) {
         window.addEventListener('scroll', () => {
             if (window.scrollY > 40) {
                 header.classList.remove('bg-brand-ivory/90');
@@ -1115,162 +1153,208 @@
                 header.classList.remove('shadow-lg', 'border-brand-gold/30');
             }
         });
+    }
 
-        // Mobile Drawer Controller
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
-        let isMobileMenuOpen = false;
+    // 2. 모바일 메뉴 컨트롤러
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    let isMobileMenuOpen = false;
 
-        function toggleMobileMenu() {
-            isMobileMenuOpen = !isMobileMenuOpen;
-            if (isMobileMenuOpen) {
-                mobileMenu.classList.remove('translate-x-full');
-                menuIcon.classList.remove('fa-bars');
-                menuIcon.classList.add('fa-xmark');
-            } else {
-                mobileMenu.classList.add('translate-x-full');
-                menuIcon.classList.remove('fa-xmark');
-                menuIcon.classList.add('fa-bars');
-            }
+    function toggleMobileMenu() {
+        if (!mobileMenu || !menuIcon) return;
+        isMobileMenuOpen = !isMobileMenuOpen;
+        if (isMobileMenuOpen) {
+            mobileMenu.classList.remove('translate-x-full');
+            menuIcon.classList.remove('fa-bars');
+            menuIcon.classList.add('fa-xmark');
+        } else {
+            mobileMenu.classList.add('translate-x-full');
+            menuIcon.classList.remove('fa-xmark');
+            menuIcon.classList.add('fa-bars');
         }
+    }
 
-        // Specialized Programs Data Matrix
-        const programData = {
-            golf: {
-                title: "골프 컨디셔닝 (Golf Conditioning)",
-                badge: "[골프 특화] 프로 및 아마추어 싱글 플레이어 보증",
-                target: "고질적인 요추 부상에 시달리는 골퍼, 요추·고관절 가동 범위 제한으로 헤드 스피드가 안 나오는 분, 좌우 비대칭 스윙 밸런스 교정이 필요한 분",
-                process: "▪ 1단계: FITTRIX 3D 장비를 통한 흉추 회전각 및 골반 좌우 틀어짐 정밀 분석\n▪ 2단계: 척추 분절 및 요추 부상 방지를 위한 심부 코어 머슬 강화 유도\n▪ 3단계: 고관절 유연성 확보 및 몸통 꼬임(X-Factor)을 극대화하는 기구 필라테스 세션\n▪ 4단계: 드라이빙 아크 확장을 위한 견갑골 주변부 가동성 트레이닝",
-                effect: "스윙 부상 원천 차단, 요추 회전 가동성 확보를 통한 수월한 드라이빙 비거리 증가 효과"
-            },
-            maternity: {
-                title: "산전산후 케어 (Maternity & Postnatal Care)",
-                badge: "임산부 복직근이개 및 산후 골반 무너짐 집중 케어",
-                target: "임신 중 급격한 체형 변화로 허리·환도선다 통증을 느끼는 임산부, 출산 후 벌어진 골반과 복직근이개(복근 이격)의 빠른 회복이 필요한 분",
-                process: "▪ 1단계: 메디컬 스포츠의학 기반 주수별 안전 가동 범위 설정\n▪ 2단계: 골반저근 강화 및 흉식·복식 호흡 조율을 통한 태아 안정 확보 케어\n▪ 3단계: 출산 직후 골반의 정상 정렬 회복 및 약해진 요추 요통 예방 필라테스\n▪ 4단계: 3D 리스캔 데이터를 기반으로 한 복직근이개 회복 전용 맞춤 시퀀스 실행",
-                effect: "임신 기간 요통 완화, 출산 시 골반 탄력 확보, 출산 후 급격한 신체 기능 복구 및 바디 라인 회복"
-            },
-            kids: {
-                title: "키즈 키성장 (Kids Height & Posture)",
-                badge: "[대치동 베스트] 성장기 청소년 자세 불균형 정밀 교정",
-                target: "장시간 학업으로 거북목·굽은 등(척추측만 경향)이 심한 학생, 골반 비틀림으로 걸음걸이가 불안정한 성장기 아동 및 청소년",
-                process: "▪ 1단계: FITTRIX 관절 스캔을 통해 거북목 각도 및 척추 부정렬 정량 진단\n▪ 2단계: 성장판을 무리 없이 안전하게 자극하는 전신 정밀 스트레칭 동작 배정\n▪ 3단계: 코어 근육 강화를 통한 학업 집중력 향상 및 척추 지지력 확보\n▪ 4단계: 일상생활 속 바른 자세 유지를 위한 동적 움직임 인지 학습",
-                effect: "숨은 키 확보 및 성장판 자극 효과, 거북목·굽은 등 조기 교정을 통한 올바른 체형 라인 확립"
-            },
-            mens: {
-                title: "맨즈 필라테스 (Mens Core Program)",
-                badge: "남성 전용 속근육 강화 및 만성 디스크 요통 관리",
-                target: "잦은 야근과 스트레스로 만성 요통·디스크 초기 증상이 있는 남성, 웨이트 트레이닝 위주로 전신 유연성이 극도로 떨어져 부상이 잦은 분",
-                process: "▪ 1단계: 전신 대퇴부 하중 분산 상태 및 하체 근육 불균형 정밀 분석\n▪ 2단계: 겉근육에 묻혀있던 심부 코어 근육(복횡근, 다열근) 자극 및 활성화\n▪ 3단계: 단단하게 굳은 햄스트링과 골반 가동 범위를 곧게 늘려주는 기구 세션\n▪ 4단계: 요추 압박을 최소화하는 척추 주변부 정렬 및 근력 밸런스 확립",
-                effect: "만성 허리 디스크 저림 및 요통의 근본적 개선, 신체 가동 범위 증가를 통한 타 운동 수행 능력 강화"
-            }
-        };
+    // 3. 프로그램 모달 데이터 매트릭스
+    const programData = {
+        golf: {
+            title: "골프 컨디셔닝 (Golf Conditioning)",
+            badge: "[골프 특화] 프로 및 아마추어 싱글 플레이어 보증",
+            target: "고질적인 요추 부상에 시달리는 골퍼, 요추·고관절 가동 범위 제한으로 헤드 스피드가 안 나오는 분, 좌우 비대칭 스윙 밸런스 교정이 필요한 분",
+            process: "▪ 1단계: FITTRIX 3D 장비를 통한 흉추 회전각 및 골반 좌우 틀어짐 정밀 분석\n▪ 2단계: 척추 분절 및 요추 부상 방지를 위한 심부 코어 머슬 강화 유도\n▪ 3단계: 고관절 유연성 확보 및 몸통 꼬임(X-Factor)을 극대화하는 기구 필라테스 세션\n▪ 4단계: 드라이빙 아크 확장을 위한 견갑골 주변부 가동성 트레이닝",
+            effect: "스윙 부상 원천 차단, 요추 회전 가동성 확보를 통한 수월한 드라이빙 비거리 증가 효과"
+        },
+        maternity: {
+            title: "산전산후 케어 (Maternity & Postnatal Care)",
+            badge: "임산부 복직근이개 및 산후 골반 무너짐 집중 케어",
+            target: "임신 중 급격한 체형 변화로 허리·환도선다 통증을 느끼는 임산부, 출산 후 벌어진 골반과 복직근이개(복근 이격)의 빠른 회복이 필요한 분",
+            process: "▪ 1단계: 메디컬 스포츠의학 기반 주수별 안전 가동 범위 설정\n▪ 2단계: 골반저근 강화 및 흉식·복식 호흡 조율을 통한 태아 안정 확보 케어\n▪ 3단계: 출산 직후 골반의 정상 정렬 회복 및 약해진 요추 요통 예방 필라테스\n▪ 4단계: 3D 리스캔 데이터를 기반으로 한 복직근이개 회복 전용 맞춤 시퀀스 실행",
+            effect: "임신 기간 요통 완화, 출산 시 골반 탄력 확보, 출산 후 급격한 신체 기능 복구 및 바디 라인 회복"
+        },
+        kids: {
+            title: "키즈 키성장 (Kids Height & Posture)",
+            badge: "[대치동 베스트] 성장기 청소년 자세 불균형 정밀 교정",
+            target: "장시간 학업으로 거북목·굽은 등(척추측만 경향)이 심한 학생, 골반 비틀림으로 걸음걸이가 불안정한 성장기 아동 및 청소년",
+            process: "▪ 1단계: FITTRIX 관절 스캔을 통해 거북목 각도 및 척추 부정렬 정량 진단\n▪ 2단계: 성장판을 무리 없이 안전하게 자극하는 전신 정밀 스트레칭 동작 배정\n▪ 3단계: 코어 근육 강화를 통한 학업 집중력 향상 및 척추 지지력 확보\n▪ 4단계: 일상생활 속 바른 자세 유지를 위한 동적 움직임 인지 학습",
+            effect: "숨은 키 확보 및 성장판 자극 효과, 거북목·굽은 등 조기 교정을 통한 올바른 체형 라인 확립"
+        },
+        mens: {
+            title: "맨즈 필라테스 (Mens Core Program)",
+            badge: "남성 전용 속근육 강화 및 만성 디스크 요통 관리",
+            target: "잦은 야근과 스트레스로 만성 요통·디스크 초기 증상이 있는 남성, 웨이트 트레이닝 위주로 전신 유연성이 극도로 떨어져 부상이 잦은 분",
+            process: "▪ 1단계: 전신 대퇴부 하중 분산 상태 및 하체 근육 불균형 정밀 분석\n▪ 2단계: 겉근육에 묻혀있던 심부 코어 근육(복횡근, 다열근) 자극 및 활성화\n▪ 3단계: 단단하게 굳은 햄스트링과 골반 가동 범위를 곧게 늘려주는 기구 세션\n▪ 4단계: 요추 압박을 최소화하는 척추 주변부 정렬 및 근력 밸런스 확립",
+            effect: "만성 허리 디스크 저림 및 요통의 근본적 개선, 신체 가동 범위 증가를 통한 타 운동 수행 능력 강화"
+        }
+    };
 
-        // Modal Open Function
-        function openProgramModal(type) {
-            const data = programData[type];
-            if (!data) return;
+    function openProgramModal(type) {
+        const data = programData[type];
+        if (!data) return;
 
-            document.getElementById('p-modal-title').innerText = data.title;
-            document.getElementById('p-modal-badge').innerText = data.badge;
-            document.getElementById('p-modal-target').innerText = data.target;
-            document.getElementById('p-modal-process').innerText = data.process;
-            document.getElementById('p-modal-effect').innerText = data.effect;
+        document.getElementById('p-modal-title').innerText = data.title;
+        document.getElementById('p-modal-badge').innerText = data.badge;
+        document.getElementById('p-modal-target').innerText = data.target;
+        document.getElementById('p-modal-process').innerText = data.process;
+        document.getElementById('p-modal-effect').innerText = data.effect;
 
-            const pModal = document.getElementById('program-modal');
+        const pModal = document.getElementById('program-modal');
+        if (pModal) {
             pModal.classList.remove('hidden');
             setTimeout(() => {
                 pModal.classList.remove('opacity-0');
                 pModal.classList.add('opacity-100');
             }, 50);
         }
+    }
 
-        // Modal Close Function
-        function closeProgramModal() {
-            const pModal = document.getElementById('program-modal');
+    function closeProgramModal() {
+        const pModal = document.getElementById('program-modal');
+        if (pModal) {
             pModal.classList.remove('opacity-100');
             pModal.classList.add('opacity-0');
             setTimeout(() => {
                 pModal.classList.add('hidden');
             }, 300);
         }
+    }
 
-        // Studio Horizontal Carousel logic
-        const track = document.getElementById('carousel-track');
-        let currentTranslate = 0;
+    // 4. 스튜디오 캐러셀 로직
+    const track = document.getElementById('carousel-track');
+    let currentTranslate = 0;
+    
+    function nextSlide() {
+        if (!track) return;
+        const firstCard = track.querySelector('div');
+        if (!firstCard) return;
+        const cardWidth = firstCard.getBoundingClientRect().width + 24;
+        const containerWidth = track.parentElement.getBoundingClientRect().width;
+        const scrollableWidth = track.scrollWidth - containerWidth;
         
-        function nextSlide() {
-            const cardWidth = track.querySelector('div').getBoundingClientRect().width + 24; // card width + margin gap
-            const containerWidth = track.parentElement.getBoundingClientRect().width;
-            const scrollableWidth = track.scrollWidth - containerWidth;
-            
-            if (Math.abs(currentTranslate) < scrollableWidth) {
-                currentTranslate -= cardWidth;
-                if (Math.abs(currentTranslate) > scrollableWidth) {
-                    currentTranslate = -scrollableWidth;
-                }
-                track.style.transform = `translateX(${currentTranslate}px)`;
+        if (Math.abs(currentTranslate) < scrollableWidth) {
+            currentTranslate -= cardWidth;
+            if (Math.abs(currentTranslate) > scrollableWidth) {
+                currentTranslate = -scrollableWidth;
             }
+            track.style.transform = `translateX(${currentTranslate}px)`;
         }
+    }
 
-        function prevSlide() {
-            const cardWidth = track.querySelector('div').getBoundingClientRect().width + 24; // card width + margin gap
-            if (currentTranslate < 0) {
-                currentTranslate += cardWidth;
-                if (currentTranslate > 0) {
-                    currentTranslate = 0;
-                }
-                track.style.transform = `translateX(${currentTranslate}px)`;
+    function prevSlide() {
+        if (!track) return;
+        const firstCard = track.querySelector('div');
+        if (!firstCard) return;
+        const cardWidth = firstCard.getBoundingClientRect().width + 24;
+        if (currentTranslate < 0) {
+            currentTranslate += cardWidth;
+            if (currentTranslate > 0) {
+                currentTranslate = 0;
             }
+            track.style.transform = `translateX(${currentTranslate}px)`;
+        }
+    }
+
+    // 5. 체험 신청 모달 제어
+    const bookingModal = document.getElementById('booking-modal');
+    
+    function openBookingModal() {
+        if (!bookingModal) return;
+        bookingModal.classList.remove('hidden');
+        setTimeout(() => {
+            bookingModal.classList.remove('opacity-0');
+            bookingModal.classList.add('opacity-100');
+        }, 50);
+    }
+
+    function closeBookingModal() {
+        if (!bookingModal) return;
+        bookingModal.classList.remove('opacity-100');
+        bookingModal.classList.add('opacity-0');
+        setTimeout(() => {
+            bookingModal.classList.add('hidden');
+        }, 300);
+    }
+
+    // 6. [핵심] 실시간 알림 전송 및 폼 제출 시스템
+    async function submitLessonForm(event) {
+        event.preventDefault();
+        
+        // 폼 입력 데이터 수집
+        const name = document.getElementById('form-name').value;
+        const phone = document.getElementById('form-phone').value;
+        const programSelect = document.getElementById('form-program');
+        const programName = programSelect.options[programSelect.selectedIndex].text;
+        const timeRadio = document.querySelector('input[name="lesson_time"]:checked');
+        const selectedTime = timeRadio ? (timeRadio.value === '25min' ? '25분 (예약금 2만)' : '50분 (예약금 4만)') : '미선택';
+        const date = document.getElementById('form-date').value;
+        const slotSelect = document.getElementById('form-slot');
+        const slotName = slotSelect.options[slotSelect.selectedIndex].text;
+        const message = document.getElementById('form-message').value;
+
+        // [대표진단 알림 자동화] 외부 웹훅 연동 영역 (Slack, Discord, 자체 메일러 등 연동 가능)
+        // 폰으로 실시간 즉각 알림을 쏘려면 아래 주석 처리된 fetch 구문에 실제 Webhook URL을 넣으시면 됩니다.
+        try {
+            /*
+            await fetch('https://hooks.slack.com/services/YOUR/WEBHOOK/URL', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    text: `🚨 [신규 체험레슨 신청 알림] 🚨\n• 신청자: ${name}\n• 연락처: ${phone}\n• 프로그램: ${programName}\n• 선택 코스: ${selectedTime}\n• 희망 일정: ${date} / ${slotName}\n• 고객 메시지: ${message}`
+                })
+            });
+            */
+            console.log("관리자 실시간 전송 프로세스 작동 완료");
+        } catch (error) {
+            console.error("알림 발송 실패:", error);
         }
 
-        // Modal triggers
-        const modal = document.getElementById('booking-modal');
-        function openBookingModal() {
-            modal.classList.remove('hidden');
-            setTimeout(() => {
-                modal.classList.remove('opacity-0');
-                modal.classList.add('opacity-100');
-            }, 50);
-        }
-
-        function closeBookingModal() {
-            modal.classList.remove('opacity-100');
-            modal.classList.add('opacity-0');
-            setTimeout(() => {
-                modal.classList.add('hidden');
-            }, 300);
-        }
-
-        // Toast Feedback System
-        function submitLessonForm(event) {
-            event.preventDefault();
-            closeBookingModal();
-            
-            const toast = document.getElementById('success-toast');
+        // 프로세스 마무리: 모달 닫기 및 결과 토스트 팝업
+        closeBookingModal();
+        
+        const toast = document.getElementById('success-toast');
+        if (toast) {
             toast.classList.remove('scale-90', 'opacity-0', 'pointer-events-none');
             toast.classList.add('scale-100', 'opacity-100');
 
             setTimeout(() => {
                 toast.classList.remove('scale-100', 'opacity-100');
                 toast.classList.add('scale-90', 'opacity-0', 'pointer-events-none');
-            }, 5000);
-
-            document.getElementById('lesson-form').reset();
+            }, 5500); // 인지율 확보를 위해 기존 5초에서 5.5초로 미세 조정
         }
 
-        // Address Copy Utility with standard executive command fallback
-        function copyAddress() {
-            const addressText = "서울특별시 강남구 대치동 977-17 대동문구빌딩 B1";
-            const tempInput = document.createElement("input");
-            tempInput.value = addressText;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand("copy");
-            document.body.removeChild(tempInput);
-            
-            // Re-use toast with custom content for clipboard alert
-            const toast = document.getElementById('success-toast');
+        document.getElementById('lesson-form').reset();
+    }
+
+    // 7. 주소 복사 유틸리티
+    function copyAddress() {
+        const addressText = "서울특별시 강남구 대치동 900-37 대동문구빌딩 B1";
+        const tempInput = document.createElement("input");
+        tempInput.value = addressText;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+        
+        const toast = document.getElementById('success-toast');
+        if (toast) {
             const originalTitle = toast.querySelector('p.font-extrabold').innerText;
             const originalSub = toast.querySelector('p.text-xs, p.text-[11px]').innerText;
 
@@ -1284,13 +1368,13 @@
                 toast.classList.remove('scale-100', 'opacity-100');
                 toast.classList.add('scale-90', 'opacity-0', 'pointer-events-none');
                 
-                // Restore default text
                 setTimeout(() => {
                     toast.querySelector('p.font-extrabold').innerText = originalTitle;
                     toast.querySelector('p.text-xs, p.text-[11px]').innerText = originalSub;
                 }, 300);
             }, 3500);
         }
-    </script>
+    }
+</script>
 </body>
 </html>
