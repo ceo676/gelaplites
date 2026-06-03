@@ -3,923 +3,1210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TCM GOLF MEMBERSHIP | 일본 5개 지역 30개 골프장 평생 이용권</title>
+    <title>젤라필라테스 | GELAPILATES - 대치 프리미엄 웰니스 스튜디오</title>
+    
+    <!-- Fonts: Playfair Display (Serif) & Pretendard (Highly readable Sans-serif for KOR) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            white: '#FFFFFF',
+                            ivory: '#FAF7F2',       /* Warm ivory base */
+                            softIvory: '#F3EDE2',   /* Slightly deeper warm beige for contrast */
+                            gold: '#C5A880',        /* Rich Champagne gold */
+                            darkGold: '#A6875C',    /* Deep contrast gold for text legibility */
+                            lightGold: '#E6D4BA',   /* Gentle accent gold */
+                            darkBrown: '#1E1A17',   /* Ultra deep premium brown instead of pure black */
+                            mutedBrown: '#4A403A',  /* Secondary text color for optimal contrast */
+                            lightGray: '#EFEAE2'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Pretendard', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
-        
-        :root {
-            --primary-dark: #0a0f0d;
-            --primary-green: #10b981;
-            --deep-green: #064e3b;
-            --gold-light: #F5E6B3;
---gold-main: #C6A75E;
---gold-deep: #9F7B2E;
---gold-dark: #6E5520;
-            --glass: rgba(255, 255, 255, 0.03);
-            --glass-border: rgba(255, 255, 255, 0.1);
-        }
-
-        body {
-            font-family: 'Noto Sans KR', sans-serif;
-            background-color: var(--primary-dark);
-            color: #f1f5f9;
+        html {
             scroll-behavior: smooth;
-            overflow-x: hidden;
         }
-
-        /* Gold Gradient Text */
-        .gold-text {
-            background: linear-gradient(
-    135deg,
-    #6E5520 0%,
-    #C6A75E 35%,
-    #F5E6B3 50%,
-    #C6A75E 65%,
-    #6E5520 100%
-);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 900;
+        /* Custom scrollbar matching gold/dark brown luxury theme */
+        ::-webkit-scrollbar {
+            width: 10px;
         }
-
-        .btn-gold {
-    background: linear-gradient(
-        135deg,
-        #6E5520 0%,
-        #C6A75E 50%,
-        #6E5520 100%
-    );
-    color: white;
-}
-    filter: brightness(1.15);
-    box-shadow: 0 10px 30px rgba(198,167,94,0.4);
-}
-
-        /* Glassmorphism Classes */
-        .glass-card {
-            background: var(--glass);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--glass-border);
-            border-radius: 2rem;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        ::-webkit-scrollbar-track {
+            background: #FAF7F2;
         }
-        .glass-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--gold-main);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        ::-webkit-scrollbar-thumb {
+            background: #C5A880;
+            border-radius: 5px;
         }
-
-        /* Animations */
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #A6875C;
         }
-        .animate-float { animation: float 6s ease-in-out infinite; }
-
-        @keyframes pulse-gold {
-            0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
-            70% { box-shadow: 0 0 0 20px rgba(212, 175, 55, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        /* High-fidelity text shadow to guarantee white text contrast on visual backgrounds */
+        .premium-text-shadow {
+            text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8), 0px 0px 4px rgba(0, 0, 0, 0.5);
         }
-        .pulse-gold { animation: pulse-gold 2s infinite; }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: var(--primary-dark); }
-        ::-webkit-scrollbar-thumb { background: var(--deep-green); border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--primary-green); }
-
-        /* Notification Toast */
-        @keyframes slideInUp {
-            from { transform: translateY(100px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+        /* Soft natural wood-like micro pattern for high-end organic brand feel */
+        .premium-texture {
+            background-color: #FAF7F2;
+            background-image: radial-gradient(rgba(197, 168, 128, 0.08) 1.5px, transparent 0),
+                              radial-gradient(rgba(197, 168, 128, 0.08) 1.5px, transparent 0);
+            background-size: 16px 16px;
+            background-position: 0 0, 8px 8px;
         }
-        .notification-toast {
-            animation: slideInUp 0.5s ease-out;
-        }
-
-        /* Counter Section Background */
-        .counter-bg {
-            background: radial-gradient(circle at center, #064e3b 0%, #0a0f0d 100%);
-        }
-
-        /* 3D Button Style */
-        .btn-3d {
-            transition: all 0.2s;
-            box-shadow: 0 6px 0 var(--gold-dark);
-        }
-        .btn-3d:active {
-            transform: translateY(4px);
-            box-shadow: 0 2px 0 var(--gold-dark);
-        }
-
-        /* Table Styling */
-        .compare-table tr:nth-child(even) { background: rgba(255,255,255,0.02); }
-        .compare-table td, .compare-table th { padding: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); }
-
     </style>
 </head>
-<body class="antialiased">
+<body class="bg-brand-white text-brand-darkBrown font-sans antialiased selection:bg-brand-gold selection:text-white">
 
-    <!-- [NAVBAR] -->
-    <nav class="fixed w-full z-[1000] bg-black/80 backdrop-blur-xl border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <span class="text-3xl font-black gold-text tracking-tighter">TCM GOLF</span>
-                <span class="hidden md:block text-[10px] bg-emerald-600 px-2 py-0.5 rounded text-white font-bold uppercase tracking-widest">Premium</span>
-            </div>
-            <div class="hidden lg:flex gap-10 font-bold text-sm uppercase tracking-widest text-slate-400">
-                <a href="#definition" class="hover:text-gold-main transition-colors">Definition</a>
-                <a href="#value" class="hover:text-gold-main transition-colors">Core Value</a>
-                <a href="#structure" class="hover:text-gold-main transition-colors">Membership</a>
-                <a href="#regions" class="hover:text-gold-main transition-colors">Regions</a>
-                <a href="#trust" class="hover:text-gold-main transition-colors">Trust</a>
-            </div>
-            <div class="flex items-center gap-4">
-                <a href="tel:010-2599-1095" class="hidden md:block text-emerald-400 font-black text-sm">📞 010.2599.1095</a>
-                <a href="#pricing" class="btn-gold px-6 py-2.5 rounded-full font-black text-sm transition-all shadow-lg">
-    상담 신청
-</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- [FLOATING UI: REAL-TIME NOTIFICATION] -->
-    <div id="toast-container" class="fixed bottom-24 left-6 z-[2000] space-y-3 pointer-events-none">
-        <!-- JS will inject toasts here -->
-    </div>
-
-    <!-- [FLOATING UI: CTAs] -->
-    <div class="fixed bottom-8 right-6 z-[2000] flex flex-col gap-4">
-        <div class="flex items-center gap-3 justify-end">
-            <div class="bg-black/80 backdrop-blur-md px-4 py-2 rounded-xl border border-white/10 text-[11px] text-emerald-400 font-bold animate-pulse shadow-2xl">
-                가입 가능 여부 확인중...
-            </div>
-            <a href="tel:010-2599-1095" class="w-16 h-16 bg-white text-black rounded-full flex items-center justify-center text-2xl shadow-2xl hover:scale-110 transition-transform">
-                <i class="fa-solid fa-phone"></i>
-            </a>
-        </div>
-        <a href="http://pf.kakao.com/_xcxhFbs/chat" target="_blank" class="w-16 h-16 bg-[#FEE500] text-[#3c1e1e] rounded-full flex items-center justify-center text-3xl shadow-2xl hover:scale-110 transition-transform pulse-gold">
-            <i class="fa-solid fa-comment"></i>
+    <!-- Floating Action Buttons (Kakao & Naver) - Premium sticky placement -->
+    <div class="fixed bottom-8 right-6 z-50 flex flex-col gap-3">
+        <!-- Kakao Quick Link -->
+        <a href="https://pf.kakao.com" target="_blank" rel="noopener noreferrer" 
+           class="flex items-center justify-center w-14 h-14 bg-[#FEE500] text-[#191919] rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 group relative">
+            <span class="absolute right-16 bg-brand-darkBrown text-white text-xs font-bold px-4 py-2 rounded-xl shadow-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none border border-brand-gold/20">
+                카카오 1:1 빠른상담
+            </span>
+            <i class="fa-solid fa-comment text-xl"></i>
+        </a>
+        <!-- Naver Live Booking -->
+        <a href="https://booking.naver.com" target="_blank" rel="noopener noreferrer" 
+           class="flex items-center justify-center w-14 h-14 bg-[#03C75A] text-white rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 group relative">
+            <span class="absolute right-16 bg-brand-darkBrown text-white text-xs font-bold px-4 py-2 rounded-xl shadow-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none border border-brand-gold/20">
+                네이버 실시간 예약
+            </span>
+            <span class="text-xl font-extrabold tracking-tighter">N</span>
         </a>
     </div>
 
-    <!-- [SECTION 1: HERO] -->
-    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-        <!-- Video/Image Background -->
+    <!-- Sticky Header Nav Bar -->
+    <header id="global-header" class="fixed top-0 left-0 w-full z-40 transition-all duration-500 backdrop-blur-lg bg-brand-ivory/90 border-b border-brand-gold/20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-24 flex items-center justify-between">
+            <!-- Brand Logo with bold proportions -->
+            <a href="#" class="flex flex-col group">
+                <span class="font-serif text-2xl lg:text-3xl tracking-[0.25em] font-bold text-brand-darkBrown group-hover:text-brand-darkGold transition-colors duration-300">
+                    GELAPILATES
+                </span>
+                <span class="text-[9px] tracking-[0.45em] uppercase text-brand-darkGold font-extrabold pl-1 mt-0.5">Luxury Wellness Studio</span>
+            </a>
+
+            <!-- Navigation Links (Desktop) - Enhanced typography weight & size -->
+            <nav class="hidden lg:flex items-center gap-10">
+                <a href="#brand-story" class="text-[15px] font-extrabold tracking-widest text-brand-darkBrown hover:text-brand-darkGold transition-colors duration-300">ABOUT</a>
+                <a href="#why-gela" class="text-[15px] font-extrabold tracking-widest text-brand-darkBrown hover:text-brand-darkGold transition-colors duration-300">WHY GELA</a>
+                <a href="#programs" class="text-[15px] font-extrabold tracking-widest text-brand-darkBrown hover:text-brand-darkGold transition-colors duration-300">PROGRAMS</a>
+                <a href="#fittrix" class="text-[15px] font-extrabold tracking-widest text-brand-darkBrown hover:text-brand-darkGold transition-colors duration-300">FITTRIX</a>
+                <a href="#studio" class="text-[15px] font-extrabold tracking-widest text-brand-darkBrown hover:text-brand-darkGold transition-colors duration-300">SPACE</a>
+                <a href="#reviews" class="text-[15px] font-extrabold tracking-widest text-brand-darkBrown hover:text-brand-darkGold transition-colors duration-300">REVIEWS</a>
+                <a href="#location" class="text-[15px] font-extrabold tracking-widest text-brand-darkBrown hover:text-brand-darkGold transition-colors duration-300">CONTACT</a>
+            </nav>
+
+            <!-- Sticky Conversion Button (Champagne Gold Highlight) -->
+            <div class="flex items-center gap-4">
+                <button onclick="openBookingModal()" class="relative overflow-hidden bg-brand-darkGold hover:bg-brand-darkBrown text-white px-6 py-3 rounded-full text-sm font-bold tracking-widest transition-all duration-300 hover:shadow-xl hover:shadow-brand-gold/30 hover:scale-105 active:scale-95">
+                    체험레슨 신청
+                </button>
+                <!-- Mobile Menu Icon -->
+                <button onclick="toggleMobileMenu()" class="lg:hidden text-brand-darkBrown focus:outline-none p-1" aria-label="Toggle Menu">
+                    <i id="menu-icon" class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Slide Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-brand-ivory z-30 transform translate-x-full transition-transform duration-500 ease-in-out lg:hidden flex flex-col justify-between pt-32 pb-16 px-10">
+        <nav class="flex flex-col gap-6 text-center">
+            <a href="#brand-story" onclick="toggleMobileMenu()" class="text-xl font-extrabold tracking-widest text-brand-darkBrown py-2 border-b border-brand-softIvory">ABOUT</a>
+            <a href="#why-gela" onclick="toggleMobileMenu()" class="text-xl font-extrabold tracking-widest text-brand-darkBrown py-2 border-b border-brand-softIvory">WHY GELAPILATES</a>
+            <a href="#programs" onclick="toggleMobileMenu()" class="text-xl font-extrabold tracking-widest text-brand-darkBrown py-2 border-b border-brand-softIvory">PROGRAMS</a>
+            <a href="#fittrix" onclick="toggleMobileMenu()" class="text-xl font-extrabold tracking-widest text-brand-darkBrown py-2 border-b border-brand-softIvory">FITTRIX 3D ANALYSIS</a>
+            <a href="#studio" onclick="toggleMobileMenu()" class="text-xl font-extrabold tracking-widest text-brand-darkBrown py-2 border-b border-brand-softIvory">STUDIO SPACE</a>
+            <a href="#reviews" onclick="toggleMobileMenu()" class="text-xl font-extrabold tracking-widest text-brand-darkBrown py-2 border-b border-brand-softIvory">REVIEWS</a>
+            <a href="#location" onclick="toggleMobileMenu()" class="text-xl font-extrabold tracking-widest text-brand-darkBrown py-2 border-b border-brand-softIvory">LOCATION</a>
+        </nav>
+        <div class="flex flex-col gap-4">
+            <button onclick="toggleMobileMenu(); openBookingModal()" class="w-full bg-brand-darkGold text-white py-4 rounded-full font-extrabold tracking-widest text-base shadow-lg shadow-brand-darkGold/20 hover:bg-brand-darkBrown transition-colors">
+                1:1 체험레슨 간편신청
+            </button>
+            <div class="flex justify-center gap-8 text-brand-darkGold text-xl mt-4">
+                <a href="#" class="hover:text-brand-darkBrown transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-brand-darkBrown transition-colors"><i class="fa-regular fa-comment"></i></a>
+                <a href="#" class="hover:text-brand-darkBrown transition-colors"><i class="fa-solid fa-phone"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 1: HERO -->
+    <section class="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-brand-darkBrown pt-24">
+        <!-- Visual Background Image (Warm Premium Pilates Studio with Natural Sunlight) -->
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&q=100&w=2000" class="w-full h-full object-cover opacity-40" alt="Premium Golf Course">
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0f0d]/80 to-[#0a0f0d]"></div>
+            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=2070&auto=format&fit=crop" 
+                 onerror="this.src='https://placehold.co/1920x1080/1E1A17/C5A880?text=GELA+PILATES+Luxury+Studio'"
+                 alt="GELAPILATES Premium Class" 
+                 class="w-full h-full object-cover object-center scale-100 select-none">
+            <!-- Deeper, more high-contrast visual gradient overlay for text legibility -->
+            <div class="absolute inset-0 bg-gradient-to-b from-brand-darkBrown/80 via-brand-darkBrown/50 to-brand-darkBrown/90"></div>
         </div>
 
-        <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
-            <!-- 실시간 시청자 알림 -->
-            <div class="inline-flex items-center gap-3 glass-card px-6 py-2 mb-10 border-white/10 rounded-full">
-                <span class="flex h-3 w-3 relative">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
-                </span>
-                <p class="text-sm font-bold tracking-tight">현재 <span id="hero-viewers" class="text-emerald-400">24</span>명이 이 페이지를 보고 있습니다</p>
-            </div>
-
-            <h2 class="text-white font-black tracking-[0.3em] text-sm md:text-lg mb-6 uppercase">TCM GOLF MEMBERSHIP</h2>
-            <h1 class="text-2xl md:text-3xl md:text-5xl lg:text-7xl font-black leading-[1.1] mb-8">
-                일본 전역 30개 골프장을<br>
-                <span class="gold-text">회원가로 평생</span> 이용하는<br>
-                <span class="relative">
-                    프리미엄 회원권
-                    <svg class="absolute -bottom-4 left-0 w-full" height="10" viewBox="0 0 400 10" fill="none"><path d="M2 8C50 3 150 3 400 8" stroke="#D4AF37" stroke-width="4" stroke-linecap="round"/></svg>
-                </span>
+        <div class="relative z-10 max-w-5xl mx-auto px-6 py-28 text-center text-brand-white flex flex-col items-center justify-center">
+            <!-- Header Badge - Bold & Highly readable -->
+            <span class="text-brand-lightGold tracking-[0.35em] uppercase text-xs lg:text-sm font-extrabold mb-8 border border-brand-lightGold/40 px-6 py-2.5 rounded-full backdrop-blur-md bg-brand-darkBrown/40">
+                대치 클래식 & 현대 기구 필라테스 전문
+            </span>
+            <!-- Main Copy - Elegant Serif with superb contrast -->
+            <h1 class="font-serif text-5xl sm:text-7xl lg:text-9xl font-bold tracking-[0.2em] mb-8 leading-tight premium-text-shadow">
+                GELA PILATES
             </h1>
-            
-            <p class="text-sm md:text-xl font-light text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-                골프를 예약하는 것이 아니라,<br class="md:hidden">
-                일본 골프의 정점을 <span class="font-black text-white underline decoration-emerald-500 underline-offset-8">‘보유’</span>하는 방식
+            <!-- Sub Copy - High Contrast with bold styling -->
+            <p class="text-brand-white font-extrabold text-lg sm:text-2xl lg:text-3xl tracking-[0.18em] mb-14 max-w-3xl leading-relaxed premium-text-shadow">
+                몸의 균형을 바로잡고,<br class="sm:hidden"> 삶의 움직임을 바꾸다
             </p>
 
-            <p class="text-sm md:text-xl font-black mb-8 md:mb-16 gold-text">
-                하나의 회원권으로 일본 5개 지역 4계절 무제한 라운드
-            </p>
-
-            <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
-                <a href="#pricing" class="w-full md:w-auto bg-emerald-600 hover:bg-emerald-500 text-white text-2xl font-black py-6 px-16 rounded-2xl transition-all shadow-2xl box-shadow: 0 20px 60px rgba(0,0,0,0.6);btn-3d">
-                    👉 회원권 상담 신청
-                </a>
-                <a href="tel:010-2599-1095" class="w-full md:w-auto glass-card border-white/20 text-white text-2xl font-black py-6 px-16 rounded-2xl hover:bg-white/10 transition-all">
-                    지금 가입 가능 여부 확인
+            <!-- Main CTAs with optimal size and response -->
+            <div class="flex flex-col sm:flex-row gap-5 w-full sm:w-auto mb-16">
+                <button onclick="openBookingModal()" class="bg-brand-gold hover:bg-brand-darkGold text-brand-darkBrown hover:text-white font-extrabold tracking-[0.2em] text-sm sm:text-base px-12 py-5 rounded-full transition-all duration-300 hover:shadow-2xl hover:shadow-brand-gold/40 hover:scale-105 active:scale-95">
+                    체험레슨 신청
+                </button>
+                <a href="https://booking.naver.com" target="_blank" rel="noopener noreferrer"
+                   class="border-2 border-brand-white hover:border-brand-gold hover:bg-brand-white/10 text-brand-white font-extrabold tracking-[0.2em] text-sm sm:text-base px-12 py-5 rounded-full transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center gap-2">
+                    네이버 예약
                 </a>
             </div>
 
-            <div class="mt-16 flex justify-center gap-10 text-slate-500 font-bold text-sm tracking-widest uppercase">
-                <div class="flex flex-col items-center"><span class="text-white text-2xl font-black mb-1">30+</span> Courses</div>
-                <div class="flex flex-col items-center"><span class="text-white text-2xl font-black mb-1">05</span> Regions</div>
-                <div class="flex flex-col items-center"><span class="text-white text-2xl font-black mb-1">∞</span> Lifetime</div>
-            </div>
-        </div>
-
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-30">
-            <i class="fa-solid fa-chevron-down text-3xl"></i>
-        </div>
-    </section>
-
-    <!-- [SECTION 2: DEFINITION - THE CORE ESSENCE] -->
-    <section id="definition" class="py-32 bg-[#0a0f0d] relative overflow-hidden px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col lg:flex-row gap-20 items-center">
-                <div class="lg:w-1/2">
-                    <span class="text-emerald-500 font-bold tracking-widest mb-4 block">WHAT IS TCM?</span>
-                    <h3 class="text-4xl md:text-3xl md:text-6xl font-black mb-10 leading-tight">
-                        TCM 회원권,<br>그 본질은 단 하나입니다.
-                    </h3>
-                    <div class="space-y-8">
-                        <div class="flex gap-6 items-start">
-                            <div class="w-14 h-14 bg-emerald-950 border border-emerald-500/30 rounded-2xl flex items-center justify-center flex-shrink-0 text-emerald-400">
-                                <i class="fa-solid fa-check text-2xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-2xl font-black mb-2 text-white">일본 5개 지역 30개 골프장 이용권</h4>
-                                <p class="text-slate-400 text-lg">단순한 티타임 확보가 아닙니다. 일본 전역의 명문 필드를 내 집 앞마당처럼 회원가/준회원가로 이용하는 실질적 권리입니다.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-6 items-start">
-                            <div class="w-14 h-14 bg-emerald-950 border border-emerald-500/30 rounded-2xl flex items-center justify-center flex-shrink-0 text-emerald-400">
-                                <i class="fa-solid fa-check text-2xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-2xl font-black mb-2 text-white">올인원 통합 서비스 제공</h4>
-                                <p class="text-slate-400 text-lg">골프장 예약은 기본, 명품 숙소와 전용 차량 송영, 현지 한국인 안내 서비스까지 완벽하게 결합된 통합 시스템을 누리십시오.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-6 items-start">
-                            <div class="w-14 h-14 bg-emerald-950 border border-emerald-500/30 rounded-2xl flex items-center justify-center flex-shrink-0 text-emerald-400">
-                                <i class="fa-solid fa-check text-2xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-2xl font-black mb-2 text-white">평생 지속되는 라이프스타일</h4>
-                                <p class="text-slate-400 text-lg">단발성 패키지 여행의 피로함에서 벗어나십시오. 한번의 자산 보유로 평생 반복 이용 가능한 골프 라이프 시스템이 구축됩니다.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:w-1/2 relative">
-                    <div class="relative z-10 glass-card p-4 border-white/10 overflow-hidden shadow-[0_0_50px_rgba(16,185,129,0.2)]">
-                        <img src="https://images.unsplash.com/photo-1592919016324-5a700e322cd5?auto=format&fit=crop&q=80&w=800" class="rounded-2xl" alt="TCM Experience">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-10">
-                            <p class="text-2xl font-black">“투어는 소비지만, 회원권은 자산이다”</p>
-                        </div>
-                    </div>
-                    <!-- Decorative Elements -->
-                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-emerald-500/20 blur-[80px] rounded-full"></div>
-                    <div class="absolute -bottom-10 -left-10 w-60 h-60 bg-gold-main/10 blur-[100px] rounded-full"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- [SECTION 3: PAIN POINTS - WHY YOU NEED IT] -->
-    <section class="py-32 bg-[#0d1410] px-6">
-        <div class="max-w-7xl mx-auto text-center mb-20">
-            <h3 class="text-4xl md:text-6xl font-black mb-6">왜 회원권이 필요한가?</h3>
-            <p class="text-slate-400 text-xl">당신의 일본 골프가 여태껏 힘들었던 5가지 이유</p>
-        </div>
-
-        <div class="grid md:grid-cols-5 gap-6">
-            <div class="glass-card card-3d p-10 flex flex-col items-center text-center group">
-                <div class="text-red-500 text-4xl mb-6 group-hover:scale-110 transition-transform"><i class="fa-solid fa-calendar-xmark"></i></div>
-                <h5 class="text-xl font-bold mb-4">예약 스트레스</h5>
-                <p class="text-slate-500 text-sm">갈 때마다 새로 알아보고 소통해야 하는 피로감</p>
-            </div>
-            <div class="glass-card card-3d p-10 flex flex-col items-center text-center group">
-                <div class="text-red-500 text-4xl mb-6 group-hover:scale-110 transition-transform"><i class="fa-solid fa-hand-holding-dollar"></i></div>
-                <h5 class="text-xl font-bold mb-4">불투명한 가격</h5>
-                <p class="text-slate-500 text-sm">성수기마다 치솟는 가격과 숙소 확보의 전쟁</p>
-            </div>
-            <div class="glass-card card-3d p-10 flex flex-col items-center text-center group">
-                <div class="text-red-500 text-4xl mb-6 group-hover:scale-110 transition-transform"><i class="fa-solid fa-lock"></i></div>
-                <h5 class="text-xl font-bold mb-4">이용의 한계</h5>
-                <p class="text-slate-500 text-sm">진짜 좋은 명문 골프장은 회원 아니면 입구 컷</p>
-            </div>
-            <div class="glass-card card-3d p-10 flex flex-col items-center text-center group">
-                <div class="text-red-500 text-4xl mb-6 group-hover:scale-110 transition-transform"><i class="fa-solid fa-route"></i></div>
-                <h5 class="text-xl font-bold mb-4">현지 이동 고충</h5>
-                <p class="text-slate-500 text-sm">공항-숙소-골프장간 복잡한 이동 수단 예약</p>
-            </div>
-            <div class="glass-card card-3d p-10 flex flex-col items-center text-center group">
-                <div class="text-red-500 text-4xl mb-6 group-hover:scale-110 transition-transform"><i class="fa-solid fa-chart-line-down"></i></div>
-                <h5 class="text-xl font-bold mb-4">경험의 불연속성</h5>
-                <p class="text-slate-500 text-sm">일회성 패키지로 끝나버리는 단기 골프 여행</p>
-            </div>
-        </div>
-
-        <div class="mt-20 bg-emerald-950/40 border border-emerald-500/30 p-12 rounded-[3rem] text-center max-w-5xl mx-auto">
-            <h4 class="text-3xl md:text-5xl font-black text-emerald-400 mb-6">회원권 하나로 이 모든 고민이 끝납니다.</h4>
-            <p class="text-slate-300 text-xl leading-relaxed">회원은 오직 골프에만 집중하고, 나머지는 TCM 시스템이 해결합니다.</p>
-        </div>
-    </section>
-
-    <!-- [SECTION 4: CORE VALUE - PREMIUM VALUE] -->
-    <section id="value" class="px-4 md:px-6 py-16 md:py-32">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-24">
-                <h3 class="text-3xl md:text-5xl font-black mb-6 gold-text">
-    회원권 핵심 가치
-</h3>
-                <p class="text-slate-400 text-xl">비교할 수 없는 TCM만의 5대 압도적 혜택</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Value 1 -->
-                <div class="glass-card p-6 md:p-12 flex flex-col relative overflow-hidden">
-                    <i class="fa-solid fa-plane-departure text-6xl text-emerald-500/20 absolute -top-4 -right-4"></i>
-                    <div class="text-emerald-500 text-4xl mb-8"><i class="fa-solid fa-earth-asia"></i></div>
-                    <h5 class="text-2xl font-black mb-6">일본 전역 완벽 커버</h5>
-                    <p class="text-slate-400 leading-relaxed mb-8">규슈, 히로시마, 오사카, 동경, 북해도까지 일본 주요 5개 거점의 30여 개 골프장을 자유롭게 교차 이용 가능합니다.</p>
-                    <div class="mt-auto flex flex-wrap gap-2">
-                        <span class="bg-white/5 px-3 py-1 rounded-full text-[10px] font-bold border border-white/10 uppercase tracking-widest">Kyushu</span>
-                        <span class="bg-white/5 px-3 py-1 rounded-full text-[10px] font-bold border border-white/10 uppercase tracking-widest">Osaka</span>
-                        <span class="bg-white/5 px-3 py-1 rounded-full text-[10px] font-bold border border-white/10 uppercase tracking-widest">Hokkaido</span>
-                    </div>
-                </div>
-
-                <!-- Value 2 -->
-                <div class="glass-card p-6 md:p-12 flex flex-col relative overflow-hidden border-emerald-500/30">
-                    <i class="fa-solid fa-trophy text-6xl text-emerald-500/20 absolute -top-4 -right-4"></i>
-                    <div class="text-emerald-500 text-4xl mb-8"><i class="fa-solid fa-crown"></i></div>
-                    <h5 class="text-2xl font-black mb-6">일본 TOP 5 명문 필드</h5>
-                    <p class="text-slate-400 leading-relaxed mb-8">조난CC 등 일본 상위 5위권 명문 골프장 이용 권한이 포함되어 있습니다. 회원권 없이는 발조차 들일 수 없는 그곳에서 라운드하십시오.</p>
-                    <div class="mt-auto">
-                        <p class="text-emerald-400 font-black text-sm tracking-tighter">✔ 일본 TOP 명문 골프장 직영 계약</p>
-                    </div>
-                </div>
-
-                <!-- Value 3 -->
-                <div class="glass-card p-6 md:p-12 flex flex-col relative overflow-hidden">
-                    <i class="fa-solid fa-money-bill-trend-up text-6xl text-emerald-500/20 absolute -top-4 -right-4"></i>
-                    <div class="text-emerald-500 text-4xl mb-8"><i class="fa-solid fa-sack-dollar"></i></div>
-                    <h5 class="text-2xl font-black mb-6">압도적 가격 효율성</h5>
-                    <p class="text-slate-400 leading-relaxed mb-8">일반 패키지 투어 대비 1회 라운드 시 최대 200만 원 이상의 비용 절감이 가능합니다. 자주 갈수록 더 큰 이득이 되는 구조입니다.</p>
-                    <div class="mt-auto">
-                        <p class="text-gold-main font-black text-sm tracking-tighter">✔ 반복 이용 시 1년 내 회원권 금액 회수 가능</p>
-                    </div>
-                </div>
-
-                <!-- Value 4 -->
-                <div class="glass-card p-6 md:p-12 flex flex-col relative overflow-hidden">
-                    <i class="fa-solid fa-car-side text-6xl text-emerald-500/20 absolute -top-4 -right-4"></i>
-                    <div class="text-emerald-500 text-4xl mb-8"><i class="fa-solid fa-gears"></i></div>
-                    <h5 class="text-2xl font-black mb-6">완전 자동 운영 케어</h5>
-                    <p class="text-slate-400 leading-relaxed mb-8">공항 도착부터 귀국까지, 전용 차량 송영과 숙소, 골프장 체크인이 모두 자동화되어 제공됩니다. 당신은 오직 골프백만 챙기십시오.</p>
-                    <div class="mt-auto">
-                        <p class="text-emerald-400 font-black text-sm tracking-tighter">✔ 현지 한국인 가이드 및 전용 차량 상시 대기</p>
-                    </div>
-                </div>
-
-                <!-- Value 5 -->
-                <div class="glass-card p-6 md:p-12 flex flex-col relative overflow-hidden">
-                    <i class="fa-solid fa-umbrella-beach text-6xl text-emerald-500/20 absolute -top-4 -right-4"></i>
-                    <div class="text-emerald-500 text-4xl mb-8"><i class="fa-solid fa-palette"></i></div>
-                    <h5 class="text-2xl font-black mb-6">라이프스타일의 확장</h5>
-                    <p class="text-slate-400 leading-relaxed mb-8">골프 그 이상을 즐기십시오. 지역별 엄선된 맛집, 관광 코스, 쇼핑 인프라가 결합되어 완벽한 일본 여행의 정수를 선사합니다.</p>
-                    <div class="mt-auto">
-                        <p class="text-emerald-400 font-black text-sm tracking-tighter">✔ 사계절(벚꽃, 단풍, 온천) 테마 라운드 제공</p>
-                    </div>
-                </div>
-
-                <!-- Value 6 (The Asset) -->
-                <div class="bg-emerald-950/20 p-6 md:p-12 rounded-[2rem] border-2 border-emerald-500 flex flex-col items-center justify-center text-center">
-                    <h5 class="text-3xl font-black text-white mb-6">투어는 소비지만,<br>회원권은 자산입니다.</h5>
-                    <p class="text-emerald-400 font-black text-4xl mb-6">ASSET</p>
-                    <a href="#pricing" class="bg-white text-black px-8 py-3 rounded-full font-black text-sm hover:scale-105 transition-transform">상담하고 자산 보유하기</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- [SECTION 5: STRUCTURE - PRICING & TERMS] -->
-    <section id="structure" class="py-32 bg-[#050807] px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-20">
-                <span class="text-emerald-500 font-bold mb-4 block tracking-widest">MEMBERSHIP PLAN</span>
-                <h3 class="text-4xl md:text-6xl font-black mb-6 italic italic">회원권 구성 및 파격 조건</h3>
-                <p class="text-slate-500 text-xl">이것이 "진짜 회원권"의 자격입니다.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-12 items-stretch mb-24">
-                <!-- GOLD -->
-                <div class="relative group">
-                    <div class="absolute -top-6 right-10 bg-emerald-500 text-white font-black px-6 py-2 rounded-full text-sm z-20 animate-bounce">실시간 잔여 3좌</div>
-                    <div class="glass-card p-6 md:p-12 border-emerald-500/50 h-full relative overflow-hidden bg-gradient-to-br from-emerald-950/20 to-transparent">
-                        <div class="flex justify-between items-start mb-10">
-                            <div>
-                                <h4 class="text-4xl font-black gold-text mb-2">GOLD 회원권</h4>
-                                <p class="text-slate-400 font-bold">법인 및 단체 최고의 선택</p>
-                            </div>
-                            <div class="w-20 h-20 bg-emerald-500/10 rounded-3xl flex items-center justify-center border border-emerald-500/30">
-                                <i class="fa-solid fa-users-gear text-4xl text-emerald-500"></i>
-                            </div>
-                        </div>
-                        <div class="text-6xl font-black text-white mb-10 tracking-tighter">2,970<span class="text-2xl font-normal text-slate-400 ml-2">만원</span></div>
-                        <ul class="space-y-6 mb-12">
-                            <li class="flex items-center gap-4 text-xl font-bold"><i class="fa-solid fa-circle-check text-emerald-400"></i> 무기명 4인 이용 (누구나)</li>
-                            <li class="flex items-center gap-4 text-slate-400"><i class="fa-solid fa-circle-check text-emerald-400"></i> 이용 횟수 : 무제한</li>
-                            <li class="flex items-center gap-4 text-slate-400"><i class="fa-solid fa-circle-check text-emerald-400"></i> 주중 / 주말 이용 가능</li>
-                            <li class="flex items-center gap-4 text-slate-400"><i class="fa-solid fa-circle-check text-emerald-400"></i> 평생 회원 자격 보장</li>
-                            <li class="flex items-center gap-4 text-slate-400"><i class="fa-solid fa-circle-check text-emerald-400"></i> 양도 및 양수 가능 (자산 가치)</li>
-                        </ul>
-                        <a href="http://pf.kakao.com/_xcxhFbs/chat" class="w-full btn-gold py-4 md:py-6 rounded-2xl text-center block text-base md:text-2xl font-black transition-all btn-3d">
-    상담 신청하기
-</a>
-                    </div>
-                </div>
-
-                <!-- SILVER -->
-                <div class="relative group">
-                    <div class="absolute -top-6 right-10 bg-slate-700 text-white font-black px-6 py-2 rounded-full text-sm z-20">실시간 잔여 4좌</div>
-                    <div class="glass-card p-12 border-white/10 h-full">
-                        <div class="flex justify-between items-start mb-10">
-                            <div>
-                                <h4 class="text-4xl font-black text-white mb-2">SILVER 회원권</h4>
-                                <p class="text-slate-400 font-bold">개인 및 소수 정예 최적화</p>
-                            </div>
-                            <div class="w-20 h-20 bg-white/5 rounded-3xl flex items-center justify-center border border-white/10">
-                                <i class="fa-solid fa-user-check text-4xl text-slate-400"></i>
-                            </div>
-                        </div>
-                        <div class="text-6xl font-black text-white mb-10 tracking-tighter">1,980<span class="text-2xl font-normal text-slate-400 ml-2">만원</span></div>
-                        <ul class="space-y-6 mb-12">
-                            <li class="flex items-center gap-4 text-xl font-bold"><i class="fa-solid fa-circle-check text-emerald-400"></i> 기명 1인 + 무기명 3인</li>
-                            <li class="flex items-center gap-4 text-slate-400"><i class="fa-solid fa-circle-check text-emerald-400"></i> 2인 플레이 가능 (커플/친구)</li>
-                            <li class="flex items-center gap-4 text-slate-400"><i class="fa-solid fa-circle-check text-emerald-400"></i> 이용 횟수 : 무제한</li>
-                            <li class="flex items-center gap-4 text-slate-400"><i class="fa-solid fa-circle-check text-emerald-400"></i> 평생 회원 자격 보장</li>
-                            <li class="flex items-center gap-4 text-slate-400"><i class="fa-solid fa-circle-check text-emerald-400"></i> 양도 및 양수 가능</li>
-                        </ul>
-                        <a href="tel:010-2599-1095" class="w-full bg-white text-black py-6 rounded-2xl text-center block text-2xl font-black transition-all hover:bg-slate-100">가입 가능 문의</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 핵심 전환 포인트: 이용 구조 -->
-            <div class="bg-emerald-950/40 p-12 rounded-[3rem] border border-emerald-500/30">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h5 class="text-3xl font-black mb-6">💡 핵심 전환 포인트</h5>
-                        <p class="text-slate-400 text-lg leading-relaxed mb-10">
-                            TCM 회원권은 단순 제휴가 아닙니다. <br>
-                            직영 관리되는 <span class="text-white font-bold">5개 골프장은 회원가</span>로, <br>
-                            나머지 <span class="text-white font-bold">27개 프리미엄 골프장은 준회원가</span>로 이용하는 합리적인 이원 구조를 통해 만족도를 극대화했습니다.
-                        </p>
-                        <div class="flex gap-6">
-                            <div class="bg-emerald-900/50 p-6 rounded-2xl flex-1 text-center">
-                                <span class="text-4xl font-black gold-text">5곳</span>
-                                <p class="text-xs mt-2 font-bold uppercase tracking-widest text-emerald-400">Member Price</p>
-                            </div>
-                            <div class="bg-white/5 p-6 rounded-2xl flex-1 text-center border border-white/5">
-                                <span class="text-4xl font-black text-white">27곳</span>
-                                <p class="text-xs mt-2 font-bold uppercase tracking-widest text-slate-500">Associate Price</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="glass-card p-6 text-center">
-                            <i class="fa-solid fa-infinity text-emerald-500 text-2xl mb-2"></i>
-                            <p class="font-bold text-sm">무제한 이용</p>
-                        </div>
-                        <div class="glass-card p-6 text-center">
-                            <i class="fa-solid fa-calendar-days text-emerald-500 text-2xl mb-2"></i>
-                            <p class="font-bold text-sm">주말 예약 가능</p>
-                        </div>
-                        <div class="glass-card p-6 text-center">
-                            <i class="fa-solid fa-user-group text-emerald-500 text-2xl mb-2"></i>
-                            <p class="font-bold text-sm">2인 플레이</p>
-                        </div>
-                        <div class="glass-card p-6 text-center">
-                            <i class="fa-solid fa-handshake text-emerald-500 text-2xl mb-2"></i>
-                            <p class="font-bold text-sm">양도/양수 가능</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- [SECTION 6: REGIONS DATA - NUMBERS DONT LIE] -->
-    <section id="regions" class="py-32 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-24">
-                <h3 class="text-5xl font-black mb-6">일본 전역 인프라 데이터</h3>
-                <p class="text-slate-400 text-xl font-bold">5개 지역, 30개 골프장, 13개 호텔 직영 운영</p>
-            </div>
-
-            <div class="grid md:grid-cols-5 gap-6">
-                <!-- Kyushu -->
-                <div class="glass-card p-8 group relative overflow-hidden">
-                    <div class="absolute -right-4 -top-4 opacity-10 group-hover:scale-125 transition-transform"><i class="fa-solid fa-map-location-dot text-8xl"></i></div>
-                    <h6 class="text-2xl font-black text-emerald-500 mb-6">규슈</h6>
-                    <div class="space-y-4">
-                        <div class="flex justify-between border-b border-white/5 pb-2">
-                            <span class="text-slate-400">골프장</span>
-                            <span class="font-black text-xl text-white">9개</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-slate-400">직영 호텔</span>
-                            <span class="font-black text-xl text-white">3곳</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Hiroshima -->
-                <div class="glass-card p-8 group relative overflow-hidden">
-                    <h6 class="text-2xl font-black text-emerald-500 mb-6">히로시마</h6>
-                    <div class="space-y-4">
-                        <div class="flex justify-between border-b border-white/5 pb-2">
-                            <span class="text-slate-400">골프장</span>
-                            <span class="font-black text-xl text-white">3개</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-slate-400">직영 호텔</span>
-                            <span class="font-black text-xl text-white">3곳</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Osaka -->
-                <div class="glass-card p-8 group relative overflow-hidden border-emerald-500/50">
-                    <h6 class="text-2xl font-black text-emerald-500 mb-6 font-black italic">오사카 (핵심)</h6>
-                    <div class="space-y-4">
-                        <div class="flex justify-between border-b border-white/5 pb-2">
-                            <span class="text-slate-400">골프장</span>
-                            <span class="font-black text-2xl text-emerald-400">13개</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-slate-400">직영 호텔</span>
-                            <span class="font-black text-xl text-white">3곳</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Tokyo -->
-                <div class="glass-card p-8 group relative overflow-hidden">
-                    <h6 class="text-2xl font-black text-emerald-500 mb-6">동경</h6>
-                    <div class="space-y-4">
-                        <div class="flex justify-between border-b border-white/5 pb-2">
-                            <span class="text-slate-400">골프장</span>
-                            <span class="font-black text-xl text-white">5개</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-slate-400">직영 호텔</span>
-                            <span class="font-black text-xl text-white">1곳</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Hokkaido -->
-                <div class="glass-card p-8 group relative overflow-hidden">
-                    <h6 class="text-2xl font-black text-emerald-500 mb-6">북해도</h6>
-                    <div class="space-y-4">
-                        <div class="flex justify-between border-b border-white/5 pb-2">
-                            <span class="text-slate-400">골프장</span>
-                            <span class="font-black text-xl text-white">6개</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-slate-400">직영 호텔</span>
-                            <span class="font-black text-xl text-white">3곳</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="mt-16 text-center">
-                <p class="text-3xl font-black italic">"총 30여 개 골프장과 13개 호텔 인프라를 독점 이용하십시오."</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- [SECTION 7: FAMOUS COURSES - THE PRIDE] -->
-    <section class="py-32 bg-[#0d1410] px-6">
-        <div class="max-w-7xl mx-auto">
-            <h3 class="text-center text-5xl font-black mb-24">회원권의 품격, 대표 골프장</h3>
-            <div class="grid md:grid-cols-3 gap-10">
-                <!-- Course 1 -->
-                <div class="group relative rounded-[3rem] overflow-hidden h-[500px]">
-                    <img src="https://images.unsplash.com/photo-1592919016324-5a700e322cd5?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Jonan CC">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex flex-col justify-end p-10">
-                        <span class="bg-emerald-600 text-white text-[10px] font-black px-3 py-1 rounded-full w-fit mb-4 uppercase tracking-widest">JAPAN TOP 5</span>
-                        <h4 class="text-3xl font-black mb-4">조난 CC (城南)</h4>
-                        <p class="text-slate-300 text-sm leading-relaxed">일본 최고 권위의 TOP 5 명문 필드. 정통 클래식 코스의 정수를 보여줍니다.</p>
-                    </div>
-                </div>
-                <!-- Course 2 -->
-                <div class="group relative rounded-[3rem] overflow-hidden h-[500px]">
-                    <img src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Miwa CC">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex flex-col justify-end p-10">
-                        <span class="bg-gold-main text-black text-[10px] font-black px-3 py-1 rounded-full w-fit mb-4 uppercase tracking-widest">KOREA FIRST</span>
-                        <h4 class="text-3xl font-black mb-4">미와 CC (美和)</h4>
-                        <p class="text-slate-300 text-sm leading-relaxed text-emerald-400 font-bold">"한국 최초의 일본 회원권 탄생지" - 압도적 신뢰와 전통의 명단</p>
-                    </div>
-                </div>
-                <!-- Course 3 -->
-                <div class="group relative rounded-[3rem] overflow-hidden h-[500px]">
-                    <img src="https://images.unsplash.com/photo-1610484198818-4720970a0491?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Asahikawa GC">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex flex-col justify-end p-10">
-                        <span class="bg-blue-600 text-white text-[10px] font-black px-3 py-1 rounded-full w-fit mb-4 uppercase tracking-widest">HOKKAIDO CORE</span>
-                        <h4 class="text-3xl font-black mb-4">아사히카와 GC</h4>
-                        <p class="text-slate-300 text-sm leading-relaxed">북해도의 시원한 자연을 품은 명문. 한여름에도 최상의 컨디션을 보장합니다.</p>
-                    </div>
-                </div>
-            </div>
-            <p class="text-center mt-16 text-2xl font-black gold-text">“회원 아니면 못 치는 골프장이 TCM에선 일상입니다.”</p>
-        </div>
-    </section>
-
-    <!-- [SECTION 8: PROCESS - SIMPLE FLOW] -->
-    <section class="py-32 px-6">
-        <div class="max-w-5xl mx-auto text-center">
-            <h3 class="text-4xl font-black mb-8 md:mb-16">회원권 이용 흐름</h3>
-            <div class="flex flex-col md:flex-row items-center gap-4">
-                <div class="flex-1 glass-card p-10 w-full">
-                    <span class="text-emerald-500 font-black text-2xl mb-4 block">01</span>
-                    <h6 class="text-xl font-black mb-2">원하는 지역 선택</h6>
-                    <p class="text-slate-500 text-sm">5개 거점 중 선택</p>
-                </div>
-                <div class="text-slate-700 hidden md:block"><i class="fa-solid fa-chevron-right text-2xl"></i></div>
-                <div class="flex-1 glass-card p-10 w-full border-emerald-500/30">
-                    <span class="text-emerald-500 font-black text-2xl mb-4 block">02</span>
-                    <h6 class="text-xl font-black mb-2">예약 요청</h6>
-                    <p class="text-slate-500 text-sm">회원 전용 채널 이용</p>
-                </div>
-                <div class="text-slate-700 hidden md:block"><i class="fa-solid fa-chevron-right text-2xl"></i></div>
-                <div class="flex-1 glass-card p-10 w-full">
-                    <span class="text-emerald-500 font-black text-2xl mb-4 block">03</span>
-                    <h6 class="text-xl font-black mb-2">현지 서비스 연동</h6>
-                    <p class="text-slate-500 text-sm">숙소/차량/안내 매칭</p>
-                </div>
-                <div class="text-slate-700 hidden md:block"><i class="fa-solid fa-chevron-right text-2xl"></i></div>
-                <div class="flex-1 bg-emerald-600 p-10 rounded-[2rem] w-full shadow-2xl">
-                    <span class="text-white font-black text-2xl mb-4 block">04</span>
-                    <h6 class="text-xl font-black mb-2">바로 라운드</h6>
-                    <p class="text-emerald-100 text-sm">몸만 떠나는 골프</p>
-                </div>
-            </div>
-            <p class="mt-16 text-3xl font-black">“복잡한 준비 없이 바로 플레이”</p>
-        </div>
-    </section>
-
-    <!-- [SECTION 9: BENEFITS - FULL PACKAGE] -->
-    <section class="py-32 bg-[#050807] px-6">
-        <div class="max-w-7xl mx-auto">
-            <h3 class="text-center text-5xl font-black mb-24 gold-text">회원권 프리미엄 혜택 구성</h3>
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="space-y-6">
-                    <div class="flex items-center gap-6 p-8 glass-card">
-                        <i class="fa-solid fa-flag-checkered text-3xl text-emerald-500"></i>
-                        <span class="text-xl font-bold">일본 30개 명문 골프장 무제한 이용</span>
-                    </div>
-                    <div class="flex items-center gap-6 p-8 glass-card">
-                        <i class="fa-solid fa-bed text-3xl text-emerald-500"></i>
-                        <span class="text-xl font-bold">특급 호텔 및 숙박 (조식 포함)</span>
-                    </div>
-                    <div class="flex items-center gap-6 p-8 glass-card">
-                        <i class="fa-solid fa-van-shuttle text-3xl text-emerald-500"></i>
-                        <span class="text-xl font-bold">공항 ↔ 호텔 ↔ 골프장 송영 서비스</span>
-                    </div>
-                </div>
-                <div class="space-y-6">
-                    <div class="flex items-center gap-6 p-8 glass-card">
-                        <i class="fa-solid fa-user-tie text-3xl text-emerald-500"></i>
-                        <span class="text-xl font-bold">현지 한국인 전담 직원 밀착 안내</span>
-                    </div>
-                    <div class="flex items-center gap-6 p-8 glass-card border-emerald-500/50">
-                        <i class="fa-solid fa-building-shield text-3xl text-emerald-500"></i>
-                        <span class="text-xl font-bold italic">일본 법인 직접 운영 예약 시스템</span>
-                    </div>
-                    <div class="flex items-center gap-6 p-8 bg-emerald-900/40 rounded-[2rem] border border-emerald-500/50">
-                        <h4 class="text-2xl font-black text-white italic">"현지 직영 운영의 차별화된 디테일"</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- [SECTION 10: COST ANALYSIS - THE ASSET ARGUMENT] -->
-    <section class="py-32 px-6 counter-bg relative">
-        <div class="max-w-6xl mx-auto text-center">
-            <h3 class="text-4xl font-black mb-8 md:mb-16">비용 가치 강조 : 당신의 선택은?</h3>
-            <div class="flex flex-col lg:flex-row items-stretch gap-10">
-                <div class="flex-1 glass-card p-12 opacity-60">
-                    <h6 class="text-2xl font-bold mb-8 text-slate-500">일반 일본 골프 투어</h6>
-                    <p class="text-4xl font-black mb-10 text-slate-400">1회 약 200~300만원</p>
-                    <div class="space-y-4 text-slate-500 text-left">
-                        <p>✖ 갈 때마다 소멸되는 비용</p>
-                        <p>✖ 성수기 바가지 요금 감수</p>
-                        <p>✖ 예약 불확실성에 따른 스트레스</p>
-                    </div>
-                    <p class="mt-12 text-red-500 font-black">"사라지는 소비(Expense)"</p>
-                </div>
-                <div class="flex-1 glass-card p-12 border-emerald-500/50 relative overflow-hidden bg-emerald-950/10">
-                    <div class="absolute top-0 right-0 p-4 bg-emerald-600 text-white font-black text-xs uppercase tracking-widest">Recommended</div>
-                    <h6 class="text-2xl font-black mb-8 gold-text">TCM GOLF MEMBERSHIP</h6>
-                    <p class="text-4xl font-black mb-10 text-white">반복 이용 시 압도적 절감</p>
-                    <div class="space-y-4 text-left">
-                        <p class="text-emerald-400">✔ 10회 이용 시 회원권 금액 상쇄</p>
-                        <p class="text-emerald-400">✔ 자산 가치 상승 시 양도로 수익 창출</p>
-                        <p class="text-emerald-400">✔ 회원 전용 고정가로 평생 안정 이용</p>
-                    </div>
-                    <p class="mt-12 text-emerald-500 font-black text-2xl">"축적되는 자산(Asset)"</p>
-                </div>
-            </div>
-            <h4 class="mt-20 text-4xl font-black gold-text italic">“갈수록 돈 버는 구조입니다.”</h4>
-        </div>
-    </section>
-
-    <!-- [SECTION 11: LIFESTYLE - BEYOND GOLF] -->
-    <section class="py-32 px-6 bg-[#0a0f0d]">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-20 items-center">
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="h-64 rounded-3xl overflow-hidden shadow-2xl animate-float"><img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&q=80" class="w-full h-full object-cover" alt="Sightseeing"></div>
-                    <div class="h-64 rounded-3xl overflow-hidden shadow-2xl mt-12 animate-float" style="animation-delay: 1s"><img src="https://images.unsplash.com/photo-1580442151529-343f2f5e0e27?auto=format&fit=crop&q=80" class="w-full h-full object-cover" alt="Food"></div>
-                    <div class="h-64 rounded-3xl overflow-hidden shadow-2xl -mt-12 animate-float" style="animation-delay: 2s"><img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&q=80" class="w-full h-full object-cover" alt="Shopping"></div>
-                    <div class="h-64 rounded-3xl overflow-hidden shadow-2xl animate-float" style="animation-delay: 3.5s"><img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&q=80" class="w-full h-full object-cover" alt="Seasons"></div>
-                </div>
+            <!-- Overlay Mini Info Banner - Highly readable -->
+            <div class="w-full max-w-3xl border-t border-brand-white/20 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm tracking-widest text-brand-lightGold font-extrabold premium-text-shadow">
                 <div>
-                    <h3 class="text-5xl font-black mb-10 leading-tight">골프 이상의 경험,<br>진정한 럭셔리 라이프</h3>
-                    <ul class="space-y-8 text-xl">
-                        <li class="flex items-center gap-6"><span class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-emerald-500 font-black border border-white/10">01</span> 일본 주요 도심 관광 및 온천 힐링</li>
-                        <li class="flex items-center gap-6"><span class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-emerald-500 font-black border border-white/10">02</span> 엄선된 미슐랭 맛집 및 이자카야 연동</li>
-                        <li class="flex items-center gap-6"><span class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-emerald-500 font-black border border-white/10">03</span> 프리미엄 아울렛 및 편집샵 쇼핑 가이드</li>
-                        <li class="flex items-center gap-6 text-emerald-400 font-black"><span class="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center text-white font-black border border-white/10">★</span> 사계절 라운드 (벚꽃/단풍/겨울)</li>
-                    </ul>
+                    <span class="text-brand-white">FITTRIX 3D 체형분석기</span> 공식 도입 센터
+                </div>
+                <div class="hidden sm:block text-brand-white/30">|</div>
+                <div>
+                    대치 프리미엄 개인맞춤 <span class="text-brand-white">1:1 · 2:1 · 3:1 기구 필라테스</span>
                 </div>
             </div>
         </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-brand-lightGold text-center flex flex-col items-center gap-2 animate-bounce">
+            <span class="text-[10px] tracking-[0.3em] uppercase font-extrabold opacity-90">SCROLL</span>
+            <i class="fa-solid fa-chevron-down text-base"></i>
+        </div>
     </section>
 
-    <!-- [SECTION 12: TRUST - RELIABILITY] -->
-    <section id="trust" class="py-32 px-6 bg-[#050807] border-y border-white/5">
-        <div class="max-w-5xl mx-auto text-center">
-            <h3 class="text-5xl font-black mb-20">압도적 신뢰 요소</h3>
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="glass-card p-10">
-                    <i class="fa-solid fa-landmark text-5xl text-emerald-500 mb-6 block"></i>
-                    <h6 class="text-xl font-black mb-4">일본 현지 법인 직접 운영</h6>
-                    <p class="text-slate-500 text-sm">에이전시가 아닌 현지 법인 직접 책임 관리 시스템</p>
-                </div>
-                <div class="glass-card p-10">
-                    <i class="fa-solid fa-certificate text-5xl text-emerald-500 mb-6 block"></i>
-                    <h6 class="text-xl font-black mb-4">정식 회원 증서 발급</h6>
-                    <p class="text-slate-500 text-sm">자산으로서의 가치를 증명하는 정식 회원 카드 및 증서</p>
-                </div>
-                <div class="glass-card p-10">
-                    <i class="fa-solid fa-car-on text-5xl text-emerald-500 mb-6 block"></i>
-                    <h6 class="text-xl font-black mb-4">직영 차량 서비스</h6>
-                    <p class="text-slate-500 text-sm">외부 하청이 아닌 TCM 전용 직영 차량 상시 운행</p>
-                </div>
-            </div>
-            
-            <div class="mt-24 p-12 glass-card border-emerald-500/30 inline-block text-left max-w-2xl">
-                <div class="flex items-center gap-8 mb-10">
-                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80" class="w-24 h-24 rounded-full border-2 border-emerald-500 object-cover" alt="VIP Team Leader">
-                    <div>
-                        <span class="text-emerald-500 font-bold uppercase tracking-widest text-xs mb-1 block">VIP 법인 총괄 팀장</span>
-                        <h5 class="text-3xl font-black text-white italic italic">김 대 우</h5>
-                        <p class="text-slate-400 text-sm font-bold tracking-widest mt-1 uppercase">Industry No.1 Specialist</p>
+    <!-- SECTION 2: BRAND STORY -->
+    <section id="brand-story" class="relative py-28 lg:py-36 bg-brand-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+                <!-- Left Premium Image Block (Novalux aesthetic) -->
+                <div class="lg:col-span-6 relative">
+                    <div class="relative overflow-hidden rounded-3xl aspect-[4/5] border border-brand-gold/15 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1200&auto=format&fit=crop" 
+                             onerror="this.src='https://placehold.co/600x750/FAF7F2/C5A880?text=Gela+Instructor'"
+                             alt="GELAPILATES Precision Motion" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <!-- Context Badge -->
+                    <div class="absolute -bottom-6 -right-6 bg-brand-ivory border-2 border-brand-gold/20 shadow-xl p-8 rounded-2xl hidden md:block max-w-[240px]">
+                        <p class="font-serif text-4xl font-bold text-brand-darkGold mb-1">01</p>
+                        <p class="text-xs sm:text-sm font-extrabold tracking-wide text-brand-darkBrown leading-relaxed">대치동 유일의 프리미엄 퍼스널 브레이싱 케어</p>
                     </div>
                 </div>
-                <p class="text-slate-300 leading-relaxed italic text-lg">
-                    "TCM은 단순히 상품을 판매하지 않습니다. 우리는 고객의 소중한 휴식과 골프의 품격을 자산으로 만들어드리는 파트너입니다. 업계 1위의 전문성으로 당신의 라운드를 책임지겠습니다."
-                </p>
+
+                <!-- Right Brand Narratives -->
+                <div class="lg:col-span-6 flex flex-col gap-8">
+                    <span class="text-brand-darkGold tracking-[0.3em] text-sm font-extrabold uppercase">ABOUT GELA PILATES</span>
+                    
+                    <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-wide text-brand-darkBrown leading-tight">
+                        Where Movement<br>Meets Balance
+                    </h2>
+
+                    <!-- Thick Elegant Brand Separator Line -->
+                    <div class="w-24 h-[3px] bg-brand-darkGold"></div>
+
+                    <!-- Enhanced body typography and contrast -->
+                    <div class="text-brand-mutedBrown font-bold leading-relaxed space-y-6 text-base sm:text-lg tracking-wide">
+                        <p>
+                            젤라필라테스는 단순히 운동을 가르치는 공간이 아닙니다.
+                        </p>
+                        <p class="text-brand-darkBrown font-extrabold border-l-4 border-brand-gold pl-4 text-lg sm:text-xl py-1">
+                            개인의 체형과 생활 습관, 움직임의 패턴을 분석하여 더 건강한 몸의 균형을 만들어가는 프리미엄 필라테스 스튜디오입니다.
+                        </p>
+                        <p class="font-medium text-brand-mutedBrown text-sm sm:text-base">
+                            우리는 매 수업 전, 첨단 FITTRIX 3D 인바디 포스처 분석과 면밀한 동적 움직임 분석을 진행합니다. 
+                            통증을 예방하고 체형을 바르게 교정하는 고품격 클래식 필라테스의 정밀함과, 회원님 개개인의 목적을 달성하는 과학적 설계를 경험해 보세요.
+                        </p>
+                    </div>
+
+                    <!-- High Contrast Signature Banner -->
+                    <div class="bg-brand-softIvory p-6 rounded-2xl border border-brand-gold/30 flex items-center gap-5 mt-4">
+                        <div class="w-14 h-14 rounded-full bg-brand-darkGold/15 flex items-center justify-center text-brand-darkGold flex-shrink-0">
+                            <i class="fa-solid fa-leaf text-2xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-extrabold tracking-wide text-brand-darkBrown">Luxury Space, Custom Program</p>
+                            <p class="text-xs font-bold text-brand-mutedBrown mt-1">전문 의료기 및 스포츠과학 학회 수료 강사진 상주</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- [SECTION 13: FINAL CTA] -->
-    <section class="py-40 bg-emerald-950/20 relative overflow-hidden px-6 text-center">
-        <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&q=80" class="w-full h-full object-cover opacity-20" alt="Final Banner">
-        </div>
-        <div class="relative z-10 max-w-4xl mx-auto">
-            <h3 class="text-4xl md:text-7xl font-black mb-8 leading-tight">
-                골프를 예약하지 마세요<br>
-                골프장을 <span class="gold-text">‘보유’</span>하세요
-            </h3>
-            <p class="text-emerald-400 font-black text-2xl mb-12">지금 마지막 한정으로 마감됩니다.</p>
-            
-            <div class="flex flex-col gap-6 items-center">
-                <a href="http://pf.kakao.com/_xcxhFbs/chat" class="w-full max-w-md btn-gold text-lg md:text-3xl font-black py-5 md:py-8 rounded-3xl shadow-2xl transition-all btn-3d">
-    👉 회원권 상담 신청
-</a>
+    <!-- SECTION 3: WHY GELAPILATES -->
+    <section id="why-gela" class="relative py-28 lg:py-36 premium-texture">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 text-center">
+            <span class="text-brand-darkGold tracking-[0.3em] text-sm font-extrabold uppercase block mb-4">THE EXCELLENCE</span>
+            <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-widest text-brand-darkBrown mb-20">
+                Why GELAPILATES
+            </h2>
 
-<a href="tel:010-2599-1095" class="text-white font-bold underline underline-offset-8 decoration-emerald-500 text-xl">
-    지금 가입 가능 여부 확인하기 (잔여 7구좌)
-</a>
-
-<p class="text-red-400 font-bold text-sm mt-4">
-※ 이번 마감 시 동일 조건 입회 어렵습니다
-</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- [SECTION 14: FOOTER] -->
-    <footer class="bg-[#050807] text-slate-600 py-24 px-6 border-t border-white/5">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-4 gap-12 mb-8 md:mb-16">
-                <div class="col-span-2">
-                    <div class="text-3xl font-black gold-text mb-6">TCM GOLF</div>
-                    <p class="text-sm leading-relaxed max-w-md">
-                        TCM GOLF MEMBERSHIP은 일본 전역의 명문 골프장 인프라와 특급 호텔 서비스를 직영 운영하는 글로벌 골프 멤버십 브랜드입니다. 우리는 고객의 여가 시간을 단순한 소비가 아닌 평생의 자산으로 전환해드립니다.
+            <!-- Cards Grid: Enhanced card depth and highly readable dark brown text -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-brand-white p-10 rounded-3xl border border-brand-gold/20 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-brand-softIvory flex items-center justify-center text-brand-darkGold mb-6 border border-brand-gold/10">
+                        <i class="fa-solid fa-expand text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold tracking-wider mb-4 text-brand-darkBrown">FITTRIX 체형분석</h3>
+                    <p class="text-sm text-brand-mutedBrown leading-relaxed font-bold tracking-wide">
+                        최고급 3D 센서를 통해 인체 불균형과 골반 정렬, 근육 밸런스를 측정하여 100% 매칭하는 완벽한 설루션을 설계합니다.
                     </p>
                 </div>
-                <div>
-                    <h6 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Information</h6>
-                    <ul class="space-y-4 text-xs">
-                        <li>법인명: (주)투어클럽</li>
-                        <li>대표자: 박정호</li>
-                        <li>사업자번호: 145-88-00771</li>
-                        <li>본사: 용인시 수지구 광교 중앙로338 ,B동 809호 / A동 427호</li>
-                    </ul>
+
+                <!-- Card 2 -->
+                <div class="bg-brand-white p-10 rounded-3xl border border-brand-gold/20 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-brand-softIvory flex items-center justify-center text-brand-darkGold mb-6 border border-brand-gold/10">
+                        <i class="fa-solid fa-person-praying text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold tracking-wider mb-4 text-brand-darkBrown">1:1 맞춤레슨</h3>
+                    <p class="text-sm text-brand-mutedBrown leading-relaxed font-bold tracking-wide">
+                        경력 5년 이상의 자격증 전문 마스터 강사진이 배정되어 타이트하게 호흡하며 최선의 근골격 움직임을 만들어냅니다.
+                    </p>
                 </div>
-                <div>
-                    <h6 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Contact & Link</h6>
-                    <ul class="space-y-4 text-xs">
-                        <li>대표번호: 010-2599-1095</li>
-                        <li>카카오채널: @http://pf.kakao.com/_xcxhFbs/chat</li>
-                        <li><a href="#" class="hover:text-white">이용약관</a></li>
-                        <li><a href="#" class="hover:text-white font-bold">개인정보처리방침</a></li>
-                    </ul>
+
+                <!-- Card 3 -->
+                <div class="bg-brand-white p-10 rounded-3xl border border-brand-gold/20 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-brand-softIvory flex items-center justify-center text-brand-darkGold mb-6 border border-brand-gold/10">
+                        <i class="fa-solid fa-door-closed text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold tracking-wider mb-4 text-brand-darkBrown">프라이빗 운영</h3>
+                    <p class="text-sm text-brand-mutedBrown leading-relaxed font-bold tracking-wide">
+                        대치동 맘들과 트렌드세터들이 인정하는 초소수 밀폐형 예약제로 온전하게 개인에게 몰입하는 평화로운 공간을 제공합니다.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-brand-white p-10 rounded-3xl border border-brand-gold/20 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-brand-softIvory flex items-center justify-center text-brand-darkGold mb-6 border border-brand-gold/10">
+                        <i class="fa-solid fa-golf-ball-stroke text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-extrabold tracking-wider mb-4 text-brand-darkBrown">골프 전문 프로그램</h3>
+                    <p class="text-sm text-brand-mutedBrown leading-relaxed font-bold tracking-wide">
+                        정밀 회전 유연성과 요추 및 골반 안정성을 키우는 메디컬 골프 시그니처 프로그램을 통해 완벽한 드라이빙 비거리를 확보합니다.
+                    </p>
                 </div>
             </div>
-            <div class="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-                <p class="text-[10px] tracking-widest uppercase font-bold">© 2025 TCM GOLF MEMBERSHIP. ALL RIGHTS RESERVED.</p>
-                <div class="flex gap-6 text-xl">
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-youtube"></i>
-                    <i class="fa-brands fa-facebook"></i>
+        </div>
+    </section>
+
+    <!-- SECTION 4: PROGRAM -->
+    <section id="programs" class="relative py-28 lg:py-36 bg-brand-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center mb-20">
+                <span class="text-brand-darkGold tracking-[0.3em] text-sm font-extrabold uppercase block mb-4">OUR CURRICULUMS</span>
+                <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-widest text-brand-darkBrown">
+                    Programs
+                </h2>
+                <p class="text-brand-mutedBrown font-bold text-sm sm:text-base tracking-widest mt-4">대치동 일대 유일무이 최첨단 자세교정 & 시그니처 웰니스 프로그램</p>
+            </div>
+
+            <!-- Highly legible Grid cards with deep typography contrast -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+                <!-- Program 1 (Kids Special) -->
+                <div class="group relative overflow-hidden rounded-3xl bg-brand-ivory border border-brand-gold/20 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300">
+                    <div class="aspect-[16/10] overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=1200&auto=format&fit=crop" 
+                             onerror="this.src='https://placehold.co/600x400/FAF7F2/C5A880?text=Kids+Pilates'"
+                             alt="Kids Height Stretch" 
+                             class="w-full h-full object-cover">
+                        <!-- High Contrast Tag -->
+                        <span class="absolute top-4 left-4 bg-brand-darkBrown text-brand-lightGold text-xs font-extrabold px-4 py-2 rounded-full tracking-widest shadow-lg">
+                            [대치동 시그니처]
+                        </span>
+                    </div>
+                    <div class="p-8">
+                        <span class="font-serif text-3xl font-extrabold text-brand-darkGold block mb-3">01</span>
+                        <h3 class="text-xl font-extrabold tracking-wider mb-3 text-brand-darkBrown">키성장 필라테스</h3>
+                        <p class="text-sm text-brand-mutedBrown leading-relaxed font-bold">
+                            성장기 아동과 청소년을 위한 정밀 자세 교정 프로그램. 골반 및 척추 성장을 안전하게 정밀 맞춤 지원합니다.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Program 2 (Golf) -->
+                <div class="group relative overflow-hidden rounded-3xl bg-brand-ivory border border-brand-gold/20 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300">
+                    <div class="aspect-[16/10] overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?q=80&w=1200&auto=format&fit=crop" 
+                             onerror="this.src='https://placehold.co/600x400/FAF7F2/C5A880?text=Golf+Pilates'"
+                             alt="Golf Conditioning" 
+                             class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-brand-darkGold text-white text-xs font-extrabold px-4 py-2 rounded-full tracking-widest shadow-lg">
+                            [인기 전문 특화]
+                        </span>
+                    </div>
+                    <div class="p-8">
+                        <span class="font-serif text-3xl font-extrabold text-brand-darkGold block mb-3">02</span>
+                        <h3 class="text-xl font-extrabold tracking-wider mb-3 text-brand-darkBrown">골프 필라테스</h3>
+                        <p class="text-sm text-brand-mutedBrown leading-relaxed font-bold">
+                            비거리 향상, 유연성 증대, 그리고 골퍼 특유의 척추 및 골반 회전 부상 예방을 위한 전문 컨디셔닝 과정.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Program 3 (Maternity) -->
+                <div class="group relative overflow-hidden rounded-3xl bg-brand-ivory border border-brand-gold/20 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300">
+                    <div class="aspect-[16/10] overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1200&auto=format&fit=crop" 
+                             onerror="this.src='https://placehold.co/600x400/FAF7F2/C5A880?text=Maternity+Pilates'"
+                             alt="Maternity Care" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <span class="font-serif text-3xl font-extrabold text-brand-darkGold block mb-3">03</span>
+                        <h3 class="text-xl font-extrabold tracking-wider mb-3 text-brand-darkBrown">산전산후 필라테스</h3>
+                        <p class="text-sm text-brand-mutedBrown leading-relaxed font-bold">
+                            임신 중 건강한 몸의 관리와 출산 직후 약해진 복직근이개 회복, 골반 균형을 되찾는 특화 회복 프로그램.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Program 4 (Posture / Diet) -->
+                <div class="group relative overflow-hidden rounded-3xl bg-brand-ivory border border-brand-gold/20 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300">
+                    <div class="aspect-[16/10] overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1599447421416-3414500d18a5?q=80&w=1200&auto=format&fit=crop" 
+                             onerror="this.src='https://placehold.co/600x400/FAF7F2/C5A880?text=Diet+Pilates'"
+                             alt="Posture Diet Care" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <span class="font-serif text-3xl font-extrabold text-brand-darkGold block mb-3">04</span>
+                        <h3 class="text-xl font-extrabold tracking-wider mb-3 text-brand-darkBrown">다이어트 · 체형교정</h3>
+                        <p class="text-sm text-brand-mutedBrown leading-relaxed font-bold">
+                            체형의 무너진 좌우 대칭 균형을 확립하고, 부드러운 코어 강화를 기반으로 매끄럽고 건강한 바디 라인을 개선합니다.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Program 5 (Men) -->
+                <div class="group relative overflow-hidden rounded-3xl bg-brand-ivory border border-brand-gold/20 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300">
+                    <div class="aspect-[16/10] overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop" 
+                             onerror="this.src='https://placehold.co/600x400/FAF7F2/C5A880?text=Mens+Pilates'"
+                             alt="Mens Core Program" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <span class="font-serif text-3xl font-extrabold text-brand-darkGold block mb-3">05</span>
+                        <h3 class="text-xl font-extrabold tracking-wider mb-3 text-brand-darkBrown">맨즈 필라테스</h3>
+                        <p class="text-sm text-brand-mutedBrown leading-relaxed font-bold">
+                            남성들의 속근육 코어 자극 및 뻣뻣한 골반 가동 범위를 부드럽고 곧게 뻗어내어 허리 피로를 완벽하게 개선합니다.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Program 6 (Private Custom) -->
+                <div class="group relative overflow-hidden rounded-3xl bg-brand-ivory border border-brand-gold/20 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300">
+                    <div class="aspect-[16/10] overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1200&auto=format&fit=crop" 
+                             onerror="this.src='https://placehold.co/600x400/FAF7F2/C5A880?text=VIP+Pilates'"
+                             alt="Premium Private Care" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <span class="font-serif text-3xl font-extrabold text-brand-darkGold block mb-3">06</span>
+                        <h3 class="text-xl font-extrabold tracking-wider mb-3 text-brand-darkBrown">프라이빗 맞춤케어</h3>
+                        <p class="text-sm text-brand-mutedBrown leading-relaxed font-bold">
+                            정밀 타깃 목적에 따라 회원 한 분만을 최우선으로 직조한 완벽한 1:1 최고 집중도의 독보적 웰니스 설계입니다.
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="mt-10 text-center">
-                <p class="text-[12px] font-black italic gold-text">“투어는 소비지만, 회원권은 자산이다”</p>
+        </div>
+    </section>
+
+    <!-- SECTION 5: FITTRIX 3D 체형분석 -->
+    <section id="fittrix" class="relative py-28 lg:py-36 bg-gradient-to-br from-brand-darkBrown to-brand-mutedBrown text-brand-white overflow-hidden">
+        <div class="absolute -right-32 -top-32 w-96 h-96 rounded-full border-2 border-brand-gold/15 pointer-events-none"></div>
+        <div class="absolute -left-32 -bottom-32 w-96 h-96 rounded-full border-2 border-brand-gold/15 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+                <!-- Left: Info with robust typography and extreme text readability -->
+                <div class="lg:col-span-5">
+                    <span class="text-brand-lightGold tracking-[0.3em] text-sm font-extrabold uppercase block mb-4">SCIENTIFIC METHOD</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-widest mb-8 leading-tight">
+                        Start With<br>Analysis
+                    </h2>
+                    <p class="text-brand-white font-bold text-base sm:text-lg leading-relaxed mb-8 tracking-wide">
+                        젤라필라테스는 막연하게 추측하여 가르치지 않습니다. <span class="text-brand-lightGold font-extrabold">FITTRIX 3D 체형분석기</span>를 통해 체형 불균형, 근육 밸런스, 체성분을 실시간 정밀 스캔하고 시각화 데이터 기반으로 수업을 정밀 설계합니다.
+                    </p>
+
+                    <!-- Features checklist -->
+                    <div class="space-y-5 text-sm sm:text-base font-bold">
+                        <div class="flex items-start gap-4">
+                            <span class="text-brand-lightGold mt-0.5 text-lg"><i class="fa-solid fa-square-check"></i></span>
+                            <p class="text-brand-white">골반 비틀림 각도 측정 및 척추 불균형의 정량 디지털 진단</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="text-brand-lightGold mt-0.5 text-lg"><i class="fa-solid fa-square-check"></i></span>
+                            <p class="text-brand-white">대퇴부 및 전신 근육 불균형 하중 스캔 데이터 분석</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="text-brand-lightGold mt-0.5 text-lg"><i class="fa-solid fa-square-check"></i></span>
+                            <p class="text-brand-white">회차별 피드백 누적 리포트 분석 및 최적 케어</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Visual Steps Flow (Deep high-contrast white boxes inside dark area) -->
+                <div class="lg:col-span-7 bg-white/10 backdrop-blur-md p-8 sm:p-12 rounded-3xl border border-brand-white/20">
+                    <h3 class="text-lg font-extrabold tracking-wider text-brand-lightGold mb-8 text-center sm:text-left">FITTRIX 4-STEP ANALYSIS SYSTEM</h3>
+                    
+                    <!-- Steps Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-4 gap-6">
+                        <!-- Step 1 -->
+                        <div class="flex flex-col items-center text-center group">
+                            <div class="w-16 h-16 rounded-full bg-brand-gold text-brand-darkBrown font-serif text-xl font-extrabold flex items-center justify-center mb-4 shadow-xl">
+                                01
+                            </div>
+                            <h4 class="text-base font-extrabold tracking-wider mb-2 text-white">체형 측정</h4>
+                            <p class="text-xs text-brand-lightGray font-bold leading-relaxed">3D 센서 정밀 동적 관절 스캔</p>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="flex flex-col items-center text-center group">
+                            <div class="w-16 h-16 rounded-full bg-brand-white/20 text-brand-lightGold font-serif text-xl font-extrabold flex items-center justify-center mb-4 border border-brand-white/30 shadow-lg">
+                                02
+                            </div>
+                            <h4 class="text-base font-extrabold tracking-wider mb-2 text-white">체형 분석</h4>
+                            <p class="text-xs text-brand-lightGray font-bold leading-relaxed">근육 밸런스 및 부정렬 탐색</p>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="flex flex-col items-center text-center group">
+                            <div class="w-16 h-16 rounded-full bg-brand-white/20 text-brand-lightGold font-serif text-xl font-extrabold flex items-center justify-center mb-4 border border-brand-white/30 shadow-lg">
+                                03
+                            </div>
+                            <h4 class="text-base font-extrabold tracking-wider mb-2 text-white">운동 설계</h4>
+                            <p class="text-xs text-brand-lightGray font-bold leading-relaxed">1:1 특화 동작 우선 배정</p>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="flex flex-col items-center text-center group">
+                            <div class="w-16 h-16 rounded-full bg-brand-white/20 text-brand-lightGold font-serif text-xl font-extrabold flex items-center justify-center mb-4 border border-brand-white/30 shadow-lg">
+                                04
+                            </div>
+                            <h4 class="text-base font-extrabold tracking-wider mb-2 text-white">변화 추적</h4>
+                            <p class="text-xs text-brand-lightGray font-bold leading-relaxed">주기적 리스캔 및 최적화 케어</p>
+                        </div>
+                    </div>
+
+                    <!-- Simulator Trigger Area with absolute bold legibility -->
+                    <div class="mt-10 pt-8 border-t border-brand-white/20 bg-brand-darkBrown/60 p-6 rounded-2xl flex flex-col sm:flex-row items-center gap-6 justify-between">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 rounded-xl bg-brand-gold/15 flex items-center justify-center text-brand-gold flex-shrink-0">
+                                <i class="fa-solid fa-chart-line text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm sm:text-base font-extrabold tracking-wide text-brand-white">내 체형 불균형 점수 무료 확인</p>
+                                <p class="text-xs text-brand-lightGray font-bold mt-1">체험레슨 등록 시 3D 분석을 전면 제공합니다.</p>
+                            </div>
+                        </div>
+                        <button onclick="openBookingModal()" class="w-full sm:w-auto bg-brand-gold text-brand-darkBrown font-extrabold text-sm px-6 py-3.5 rounded-xl tracking-wider hover:bg-brand-white transition-all duration-300">
+                            분석 신청하기
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: STUDIO (프리미엄 공간 소개) -->
+    <section id="studio" class="relative py-28 lg:py-36 bg-brand-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <!-- Header Alignment -->
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-16 gap-6">
+                <div>
+                    <span class="text-brand-darkGold tracking-[0.3em] text-sm font-extrabold uppercase block mb-4">LUXURY SPACE</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-widest text-brand-darkBrown">
+                        Studio Space
+                    </h2>
+                </div>
+                <!-- Nav Arrows for Carousel Slider -->
+                <div class="flex gap-4">
+                    <button onclick="prevSlide()" class="w-14 h-14 rounded-full border-2 border-brand-gold/30 flex items-center justify-center text-brand-darkBrown hover:bg-brand-gold hover:text-white hover:border-brand-gold transition-all duration-300">
+                        <i class="fa-solid fa-chevron-left text-lg"></i>
+                    </button>
+                    <button onclick="nextSlide()" class="w-14 h-14 rounded-full border-2 border-brand-gold/30 flex items-center justify-center text-brand-darkBrown hover:bg-brand-gold hover:text-white hover:border-brand-gold transition-all duration-300">
+                        <i class="fa-solid fa-chevron-right text-lg"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Horizontal Container Track -->
+            <div class="relative overflow-hidden -mx-6 px-6 sm:-mx-12 sm:px-12">
+                <div id="carousel-track" class="flex gap-6 transition-transform duration-500 ease-in-out" style="transform: translateX(0px);">
+                    <!-- Reformer -->
+                    <div class="min-w-[320px] sm:min-w-[420px] flex-shrink-0 group">
+                        <div class="aspect-[4/3] overflow-hidden rounded-3xl border border-brand-gold/20 mb-5 shadow-md">
+                            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=800&auto=format&fit=crop" 
+                                 onerror="this.src='https://placehold.co/800x600/FAF7F2/C5A880?text=Reformer+Room'"
+                                 alt="Reformer Room" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-lg font-extrabold tracking-wider text-brand-darkBrown">리포머 (Reformer Room)</h4>
+                        <p class="text-sm text-brand-mutedBrown font-bold mt-2 leading-relaxed">정밀 척추 정렬 유도 및 체형 교정 효과의 필라테스 리포머 대형 룸</p>
+                    </div>
+
+                    <!-- Cadillac -->
+                    <div class="min-w-[320px] sm:min-w-[420px] flex-shrink-0 group">
+                        <div class="aspect-[4/3] overflow-hidden rounded-3xl border border-brand-gold/20 mb-5 shadow-md">
+                            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=800&auto=format&fit=crop" 
+                                 onerror="this.src='https://placehold.co/800x600/FAF7F2/C5A880?text=Cadillac+Room'"
+                                 alt="Cadillac Room" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-lg font-extrabold tracking-wider text-brand-darkBrown">캐딜락 (Cadillac Room)</h4>
+                        <p class="text-sm text-brand-mutedBrown font-bold mt-2 leading-relaxed">코어 근육 집중 단련과 지탱 유연성을 선사하는 캐딜락 특화 공간</p>
+                    </div>
+
+                    <!-- Chair & Barrel -->
+                    <div class="min-w-[320px] sm:min-w-[420px] flex-shrink-0 group">
+                        <div class="aspect-[4/3] overflow-hidden rounded-3xl border border-brand-gold/20 mb-5 shadow-md">
+                            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop" 
+                                 onerror="this.src='https://placehold.co/800x600/FAF7F2/C5A880?text=Chair+Barrel'"
+                                 alt="Chair & Barrel" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-lg font-extrabold tracking-wider text-brand-darkBrown">체어 & 바렐 (Chair & Barrel)</h4>
+                        <p class="text-sm text-brand-mutedBrown font-bold mt-2 leading-relaxed">체형 교정 및 완벽 바디 라인을 유도하는 체어 및 바렐 콤팩트 존</p>
+                    </div>
+
+                    <!-- Private Shower -->
+                    <div class="min-w-[320px] sm:min-w-[420px] flex-shrink-0 group">
+                        <div class="aspect-[4/3] overflow-hidden rounded-3xl border border-brand-gold/20 mb-5 shadow-md">
+                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop" 
+                                 onerror="this.src='https://placehold.co/800x600/FAF7F2/C5A880?text=Private+Shower'"
+                                 alt="Private Shower" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-lg font-extrabold tracking-wider text-brand-darkBrown">1인 개인 샤워실 & 탈의실</h4>
+                        <p class="text-sm text-brand-mutedBrown font-bold mt-2 leading-relaxed">외부 동선을 안전하게 완벽 차단하여 편안한 이용이 가능한 개별 시설</p>
+                    </div>
+
+                    <!-- Fittrix Zone -->
+                    <div class="min-w-[320px] sm:min-w-[420px] flex-shrink-0 group">
+                        <div class="aspect-[4/3] overflow-hidden rounded-3xl border border-brand-gold/20 mb-5 shadow-md">
+                            <img src="https://images.unsplash.com/photo-1599447421416-3414500d18a5?q=80&w=800&auto=format&fit=crop" 
+                                 onerror="this.src='https://placehold.co/800x600/FAF7F2/C5A880?text=Fittrix+Zone'"
+                                 alt="Fittrix Zone" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-lg font-extrabold tracking-wider text-brand-darkBrown">FITTRIX 3D 분석 존</h4>
+                        <p class="text-sm text-brand-mutedBrown font-bold mt-2 leading-relaxed">언제든 정교한 부정렬 및 체형 이상 각도를 계측 받는 스마트 공간</p>
+                    </div>
+
+                    <!-- Cardio Zone Stairclimber -->
+                    <div class="min-w-[320px] sm:min-w-[420px] flex-shrink-0 group">
+                        <div class="aspect-[4/3] overflow-hidden rounded-3xl border border-brand-gold/20 mb-5 shadow-md">
+                            <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=800&auto=format&fit=crop" 
+                                 onerror="this.src='https://placehold.co/800x600/FAF7F2/C5A880?text=Cardio+Zone'"
+                                 alt="Cardio Zone Stairclimber" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-lg font-extrabold tracking-wider text-brand-darkBrown">ORGO 천국의 계단 & 유산소 존</h4>
+                        <p class="text-sm text-brand-mutedBrown font-bold mt-2 leading-relaxed">운동 시너지를 최대로 끌어올릴 고강도 다이어트 연계 유산소 장비 존</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: SPECIALIZED CARE (핵심 타깃 요약) -->
+    <section class="relative py-28 bg-brand-ivory border-t border-b border-brand-gold/20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center mb-16">
+                <span class="text-brand-darkGold tracking-[0.3em] text-sm font-extrabold uppercase block mb-4">SPECIALIZED CARE</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold tracking-widest text-brand-darkBrown">
+                    Specialized Programs
+                </h2>
+                <p class="text-brand-mutedBrown text-sm sm:text-base font-bold mt-3">대치동 일대 검증받은 시그니처 4대 중점 집중 케어 코스</p>
+            </div>
+
+            <!-- Highly contrastive cards with clear layout structure -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-brand-white p-8 rounded-3xl border border-brand-gold/25 shadow-md flex flex-col justify-between h-64 group hover:border-brand-darkGold transition-colors duration-300">
+                    <div>
+                        <div class="text-brand-darkGold mb-4 text-2xl"><i class="fa-solid fa-golf-ball-stroke"></i></div>
+                        <h3 class="font-extrabold text-lg tracking-wider text-brand-darkBrown mb-3">골프 컨디셔닝</h3>
+                        <p class="text-sm text-brand-mutedBrown leading-relaxed font-bold">요추의 원활한 회전 및 유연성을 확보하여 부상 없는 드라이빙 아크를 보장합니다.</p>
+                    </div>
+                    <span class="text-xs text-brand-darkGold font-extrabold tracking-widest group-hover:underline">자세히 알아보기 →</span>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-brand-white p-8 rounded-3xl border border-brand-gold/25 shadow-md flex flex-col justify-between h-64 group hover:border-brand-darkGold transition-colors duration-300">
+                    <div>
+                        <div class="text-brand-darkGold mb-4 text-2xl"><i class="fa-solid fa-baby"></i></div>
+                        <h3 class="font-extrabold text-lg tracking-wider text-brand-darkBrown mb-3">산전산후 케어</h3>
+                        <p class="text-sm text-brand-mutedBrown leading-relaxed font-bold">임산부 복직근이개 골반 회복 및 요추 관절 안정화를 전문적으로 케어합니다.</p>
+                    </div>
+                    <span class="text-xs text-brand-darkGold font-extrabold tracking-widest group-hover:underline">자세히 알아보기 →</span>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-brand-white p-8 rounded-3xl border border-brand-gold/25 shadow-md flex flex-col justify-between h-64 group hover:border-brand-darkGold transition-colors duration-300">
+                    <div>
+                        <div class="text-brand-darkGold mb-4 text-2xl"><i class="fa-solid fa-children"></i></div>
+                        <h3 class="font-extrabold text-lg tracking-wider text-brand-darkBrown mb-3">키즈 키성장</h3>
+                        <p class="text-sm text-brand-mutedBrown leading-relaxed font-bold">성장판 자극, 자세 불균형 정밀 교정으로 아이의 숨은 키 성장을 지원합니다.</p>
+                    </div>
+                    <span class="text-xs text-brand-darkGold font-extrabold tracking-widest group-hover:underline">자세히 알아보기 →</span>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-brand-white p-8 rounded-3xl border border-brand-gold/25 shadow-md flex flex-col justify-between h-64 group hover:border-brand-darkGold transition-colors duration-300">
+                    <div>
+                        <div class="text-brand-darkGold mb-4 text-2xl"><i class="fa-solid fa-user-tie"></i></div>
+                        <h3 class="font-extrabold text-lg tracking-wider text-brand-darkBrown mb-3">맨즈 필라테스</h3>
+                        <p class="text-sm text-brand-mutedBrown leading-relaxed font-bold">코어 근육 자극 및 뻣뻣해진 전신 유연성을 정렬하여 디스크 요통을 줄여줍니다.</p>
+                    </div>
+                    <span class="text-xs text-brand-darkGold font-extrabold tracking-widest group-hover:underline">자세히 알아보기 →</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: REVIEW (회원 리얼 후기) -->
+    <section id="reviews" class="relative py-28 lg:py-36 bg-brand-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center mb-20">
+                <span class="text-brand-darkGold tracking-[0.3em] text-sm font-extrabold uppercase block mb-4">RELIABLE REVIEWS</span>
+                <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-widest text-brand-darkBrown">
+                    Member Reviews
+                </h2>
+                <p class="text-brand-mutedBrown text-sm sm:text-base font-bold mt-3">대치동 학부모님들과 회원들이 보증하는 최고의 가치</p>
+            </div>
+
+            <!-- Highly Visible Review Grid with robust dark brown text and warm beige boxes -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Review Card 1 -->
+                <div class="bg-brand-softIvory p-10 rounded-3xl border border-brand-gold/20 shadow-md flex flex-col justify-between h-auto">
+                    <div>
+                        <div class="flex items-center gap-1.5 text-brand-darkGold text-sm mb-5">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-sm sm:text-base text-brand-darkBrown leading-relaxed font-bold mb-8">
+                            "초등학생 딸아이 거북목과 안짱다리가 심해서 대치동 키성장 필라테스 알아보다가 등록했어요. FITTRIX로 눈으로 체형 상태 확인하고 맞춤으로 봐주시니까 3개월 만에 자세가 눈에 띄게 발라졌고 숨은 키도 부쩍 큰 느낌입니다."
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between text-xs sm:text-sm text-brand-darkGold border-t border-brand-gold/30 pt-5 font-extrabold">
+                        <span class="text-brand-darkBrown">이*경 회원님 (초등 자녀 보호자)</span>
+                        <span>자세교정/키성장</span>
+                    </div>
+                </div>
+
+                <!-- Review Card 2 -->
+                <div class="bg-brand-softIvory p-10 rounded-3xl border border-brand-gold/20 shadow-md flex flex-col justify-between h-auto">
+                    <div>
+                        <div class="flex items-center gap-1.5 text-brand-darkGold text-sm mb-5">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-sm sm:text-base text-brand-darkBrown leading-relaxed font-bold mb-8">
+                            "아마추어 싱글 플레이어로 골프 오래 쳤는데 고질적인 왼쪽 고관절 통증이 있었어요. 젤라에서 골프 특화 필라테스 시작하고 요추 회전 가동력이 정말 부드러워져서 비거리가 15m 이상 수월하게 늘었습니다. 강력 추천합니다."
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between text-xs sm:text-sm text-brand-darkGold border-t border-brand-gold/30 pt-5 font-extrabold">
+                        <span class="text-brand-darkBrown">최*우 회원님 (아마추어 골퍼)</span>
+                        <span>골프 필라테스</span>
+                    </div>
+                </div>
+
+                <!-- Review Card 3 -->
+                <div class="bg-brand-softIvory p-10 rounded-3xl border border-brand-gold/20 shadow-md flex flex-col justify-between h-auto">
+                    <div>
+                        <div class="flex items-center gap-1.5 text-brand-darkGold text-sm mb-5">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-sm sm:text-base text-brand-darkBrown leading-relaxed font-bold mb-8">
+                            "첫 임신이라 허리 골반 통증으로 고생 많았습니다. 주치의 추천으로 산전 케어 시작했는데 강사님이 엄청 세심하게 호흡법과 관절에 무리 안 가는 동작들로 조율해 주셔서 안전하게 순산했습니다. 산후 회복 운동도 무조건 여기에요."
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between text-xs sm:text-sm text-brand-darkGold border-t border-brand-gold/30 pt-5 font-extrabold">
+                        <span class="text-brand-darkBrown">김*민 회원님 (산전 산후 관리)</span>
+                        <span>산전 전문 케어</span>
+                    </div>
+                </div>
+
+                <!-- Review Card 4 -->
+                <div class="bg-brand-softIvory p-10 rounded-3xl border border-brand-gold/20 shadow-md flex flex-col justify-between h-auto">
+                    <div>
+                        <div class="flex items-center gap-1.5 text-brand-darkGold text-sm mb-5">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-sm sm:text-base text-brand-darkBrown leading-relaxed font-bold mb-8">
+                            "필라테스는 여자 운동이라고 생각했었는데 만성 허리 디스크 통증 때문에 속는 셈 치고 등록했습니다. 몸이 엄청 굳어있어서 걱정했는데 1:1로 코어 잡는 원리를 상세하게 가이드받고 나니 디스크 저림 증상이 완전히 완화되었습니다."
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between text-xs sm:text-sm text-brand-darkGold border-t border-brand-gold/30 pt-5 font-extrabold">
+                        <span class="text-brand-darkBrown">박*준 회원님 (대기업 임원)</span>
+                        <span>맨즈 디스크 관리</span>
+                    </div>
+                </div>
+
+                <!-- Review Card 5 -->
+                <div class="bg-brand-softIvory p-10 rounded-3xl border border-brand-gold/20 shadow-md flex flex-col justify-between h-auto">
+                    <div>
+                        <div class="flex items-center gap-1.5 text-brand-darkGold text-sm mb-5">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-sm sm:text-base text-brand-darkBrown leading-relaxed font-bold mb-8">
+                            "수많은 학원 다녀봤지만 이렇게 매 차수 FITTRIX 측정 데이터 기반으로 정확히 뼈 각도 어깨 무너진 밸런스를 차트화해서 맞춰주는 곳은 처음입니다. 매달 운동 일지와 변화 모습을 체계적으로 보관해주니 평생 신뢰하게 됩니다."
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between text-xs sm:text-sm text-brand-darkGold border-t border-brand-gold/30 pt-5 font-extrabold">
+                        <span class="text-brand-darkBrown">장*윤 회원님 (직장인 척추 디스크)</span>
+                        <span>3D 체형분석 케어</span>
+                    </div>
+                </div>
+
+                <!-- Review Card 6 -->
+                <div class="bg-brand-softIvory p-10 rounded-3xl border border-brand-gold/20 shadow-md flex flex-col justify-between h-auto">
+                    <div>
+                        <div class="flex items-center gap-1.5 text-brand-darkGold text-sm mb-5">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-sm sm:text-base text-brand-darkBrown leading-relaxed font-bold mb-8">
+                            "시설이 정말 럭셔리하고 1인 샤워룸이라 편안합니다. 수업 끝나고 유산소 ORGO 탈 수 있는 천국의 계단 존도 무료라서 운동 끝나고 땀 빼고 가기 최고에요. 대치동 필라테스 스튜디오 중에서 인테리어와 관리 역량 모두 단연 최고입니다."
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between text-xs sm:text-sm text-brand-darkGold border-t border-brand-gold/30 pt-5 font-extrabold">
+                        <span class="text-brand-darkBrown">서*은 회원님 (바디 밸런스 케어)</span>
+                        <span>프리미엄 웰니스</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 9: LOCATION (오시는 길 및 편의성) -->
+    <section id="location" class="relative py-28 lg:py-36 premium-texture border-t border-brand-gold/20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+                <!-- Left: Premium Abstract Custom Map -->
+                <div class="lg:col-span-7 flex flex-col">
+                    <span class="text-brand-darkGold tracking-[0.3em] text-sm font-extrabold uppercase block mb-4">MAP & DIRECTIONS</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-wide text-brand-darkBrown mb-8">
+                        Visit GELAPILATES
+                    </h2>
+
+                    <!-- Premium Custom Map Visual Frame with extremely high-contrast markers -->
+                    <div class="relative w-full aspect-[16/10] bg-brand-lightGray rounded-3xl overflow-hidden border-2 border-brand-gold/30 shadow-xl">
+                        <!-- Custom styled map background with ivory streets -->
+                        <div class="absolute inset-0 bg-[#F4ECE2]" style="background-image: radial-gradient(#C5A880 1.5px, transparent 1.5px), radial-gradient(#C5A880 1.5px, #F4ECE2 1.5px); background-size: 40px 40px; background-position: 0 0, 20px 20px;">
+                            <!-- Fake pathways with premium ivory layout -->
+                            <div class="absolute top-1/3 left-0 w-full h-16 bg-brand-white/50 transform -rotate-12 shadow-sm"></div>
+                            <div class="absolute top-0 left-1/3 w-20 h-full bg-brand-white/50 transform rotate-12 shadow-sm"></div>
+                            
+                            <!-- Custom Luxury Pin Marker -->
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+                                <div class="bg-brand-darkBrown text-brand-lightGold px-5 py-3.5 rounded-full shadow-2xl relative animate-bounce flex items-center justify-center border-2 border-brand-gold">
+                                    <span class="text-xs tracking-widest font-extrabold">GELA PILATES</span>
+                                </div>
+                                <div class="w-4 h-4 bg-brand-darkBrown border-b-2 border-r-2 border-brand-gold rotate-45 -mt-2.5 shadow-lg"></div>
+                            </div>
+
+                            <!-- Map controls overlay -->
+                            <div class="absolute bottom-5 left-5 bg-brand-darkBrown text-white border border-brand-gold/30 px-5 py-3.5 rounded-xl flex items-center gap-3.5 shadow-2xl text-xs font-extrabold">
+                                <span class="flex h-3 w-3 relative">
+                                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-80"></span>
+                                  <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                                </span>
+                                <span>대동문구빌딩 B1 (한티역 2번 출구 바로 앞)</span>
+                            </div>
+
+                            <!-- Navigation zoom controller -->
+                            <div class="absolute right-5 top-5 flex flex-col gap-1 shadow-xl rounded-xl overflow-hidden border border-brand-gold/20 bg-brand-white">
+                                <button class="w-10 h-10 flex items-center justify-center text-lg font-extrabold text-brand-darkBrown hover:bg-brand-softIvory border-b border-brand-lightGray">+</button>
+                                <button class="w-10 h-10 flex items-center justify-center text-lg font-extrabold text-brand-darkBrown hover:bg-brand-softIvory">-</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: High contrast address specifics and robust actions -->
+                <div class="lg:col-span-5 flex flex-col justify-between">
+                    <div class="flex flex-col gap-8">
+                        <div>
+                            <p class="text-xs sm:text-sm text-brand-darkGold font-extrabold tracking-widest uppercase mb-2">STUDIO ADDRESS</p>
+                            <p class="text-xl sm:text-2xl font-extrabold tracking-wide text-brand-darkBrown leading-relaxed">
+                                서울특별시 강남구 대치동 900-37<br>대동문구빌딩 B1
+                            </p>
+                            <!-- Clipboard copy button with strong feedback support -->
+                            <button onclick="copyAddress()" class="text-sm text-brand-darkGold font-extrabold underline tracking-wider mt-4 hover:text-brand-darkBrown transition-colors focus:outline-none flex items-center gap-2">
+                                주소 텍스트 복사하기 <i class="fa-regular fa-copy"></i>
+                            </button>
+                        </div>
+
+                        <!-- Amenities list with clear spacing and bold icons -->
+                        <div class="grid grid-cols-2 gap-6 border-t border-b border-brand-gold/35 py-8">
+                            <div class="flex items-center gap-4">
+                                <span class="text-brand-darkGold text-xl"><i class="fa-solid fa-square-parking"></i></span>
+                                <span class="text-sm sm:text-base text-brand-darkBrown font-extrabold">무료 주차 가능</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <span class="text-brand-darkGold text-xl"><i class="fa-solid fa-shower"></i></span>
+                                <span class="text-sm sm:text-base text-brand-darkBrown font-extrabold">1인 프라이빗 샤워실</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <span class="text-brand-darkGold text-xl"><i class="fa-solid fa-clipboard-user"></i></span>
+                                <span class="text-sm sm:text-base text-brand-darkBrown font-extrabold">100% 모바일 예약제</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <span class="text-brand-darkGold text-xl"><i class="fa-regular fa-clock"></i></span>
+                                <span class="text-sm sm:text-base text-brand-darkBrown font-extrabold">오후 10시까지 운영</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enhanced layout conversion buttons -->
+                    <div class="flex flex-col gap-4 mt-8 lg:mt-0">
+                        <a href="https://pf.kakao.com" target="_blank" rel="noopener noreferrer" 
+                           class="w-full bg-[#FEE500] hover:bg-[#F0D600] text-[#191919] font-extrabold tracking-wider text-sm sm:text-base py-4.5 rounded-2xl flex items-center justify-center gap-2.5 shadow-md transition-all duration-300 hover:-translate-y-0.5">
+                            <i class="fa-solid fa-comment text-xl"></i> 카카오채널 실시간 1:1 상담
+                        </a>
+                        <a href="https://booking.naver.com" target="_blank" rel="noopener noreferrer" 
+                           class="w-full bg-[#03C75A] hover:bg-[#02A84C] text-white font-extrabold tracking-wider text-sm sm:text-base py-4.5 rounded-2xl flex items-center justify-center gap-2.5 shadow-md transition-all duration-300 hover:-translate-y-0.5">
+                            <span class="text-lg font-black tracking-tighter">N</span> 네이버 실시간 온라인 예약
+                        </a>
+                        <a href="tel:02-1234-5678" 
+                           class="w-full border-2 border-brand-darkBrown hover:bg-brand-darkBrown hover:text-white text-brand-darkBrown font-extrabold tracking-wider text-sm sm:text-base py-4.5 rounded-2xl flex items-center justify-center gap-2.5 transition-all duration-300 hover:-translate-y-0.5">
+                            <i class="fa-solid fa-phone"></i> 오피스 유선 문의하기
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 10: FINAL CTA (마지막 행동 유도) -->
+    <section class="relative py-32 bg-brand-darkGold text-brand-white text-center overflow-hidden">
+        <!-- Intense high contrast background layering -->
+        <div class="absolute inset-0 bg-gradient-to-tr from-brand-darkGold via-brand-gold to-brand-darkGold opacity-95"></div>
+        
+        <div class="relative z-10 max-w-5xl mx-auto px-6">
+            <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-[0.15em] mb-8 leading-tight premium-text-shadow">
+                당신의 몸은 더 좋은<br class="sm:hidden"> 움직임을 기억할 수 있습니다.
+            </h2>
+            <p class="text-brand-white font-extrabold tracking-widest text-base sm:text-xl lg:text-2xl mb-12 premium-text-shadow">
+                젤라필라테스 대치 본점에서 나만의 3D 맞춤 첫 체험레슨을 지금 시작해보세요.
+            </p>
+            
+            <button onclick="openBookingModal()" class="bg-brand-darkBrown text-brand-lightGold hover:text-white font-extrabold tracking-[0.25em] text-sm sm:text-base px-16 py-5.5 rounded-full shadow-2xl hover:bg-brand-darkBrown/90 transition-all duration-300 hover:scale-105 active:scale-95">
+                체험레슨 지금 신청하기
+            </button>
+        </div>
+    </section>
+
+    <!-- FOOTER (하단 정보 영역) -->
+    <footer class="bg-brand-darkBrown text-brand-lightGray py-20 border-t border-brand-gold/20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex flex-col lg:flex-row justify-between items-start gap-12 mb-16">
+                <!-- Footer left brand identity -->
+                <div>
+                    <h3 class="font-serif text-3xl tracking-[0.25em] text-white font-bold mb-3">GELAPILATES</h3>
+                    <p class="text-xs sm:text-sm tracking-widest text-brand-lightGold font-extrabold mb-8">Premium Wellness & Posture Correcting Studio</p>
+                    
+                    <div class="text-xs sm:text-sm leading-loose text-brand-lightGray/80 space-y-2 max-w-xl font-bold">
+                        <p>상호명 : 젤라필라테스 | 대표자 : 최민지</p>
+                        <p>사업장 소재지 : 서울특별시 강남구 대치동 900-37 대동문구빌딩 B1</p>
+                        <p>카카오채널 문의 : @젤라필라테스 | 유선번호 : 02-1234-5678</p>
+                        <p>사업자등록번호 : 120-00-00000 | 통신판매업신고 : 제 2026-서울강남-0000호</p>
+                    </div>
+                </div>
+
+                <!-- Footer right structural quicklinks -->
+                <div class="flex flex-col sm:flex-row gap-12 text-xs sm:text-sm tracking-wider font-extrabold">
+                    <div class="flex flex-col gap-4">
+                        <p class="font-extrabold text-white tracking-widest text-sm border-b border-brand-gold/30 pb-2">SITEMAP</p>
+                        <a href="#brand-story" class="hover:text-brand-lightGold transition-colors">스토리 소개</a>
+                        <a href="#why-gela" class="hover:text-brand-lightGold transition-colors">왜 젤라필라테스인가</a>
+                        <a href="#programs" class="hover:text-brand-lightGold transition-colors">기구 특화 세부 프로그램</a>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <p class="font-extrabold text-white tracking-widest text-sm border-b border-brand-gold/30 pb-2">CUSTOMER CENTER</p>
+                        <a href="#" onclick="openBookingModal(); return false;" class="hover:text-brand-lightGold transition-colors">1:1 체험레슨 빠른접수</a>
+                        <a href="https://booking.naver.com" class="hover:text-brand-lightGold transition-colors">네이버 공식 예약 가이드</a>
+                        <a href="#location" class="hover:text-brand-lightGold transition-colors">오시는 길 & 주차 공간 안내</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer legal metadata -->
+            <div class="border-t border-brand-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-brand-lightGray/60 font-bold">
+                <p>Copyright © GELAPILATES. All Rights Reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:underline">이용약관</a>
+                    <a href="#" class="hover:underline">개인정보처리방침</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <script>
-        // [1] 실시간 시청자 수 애니메이션
-        function animateViewers() {
-            const viewerEl = document.getElementById('hero-viewers');
-            let count = 24;
-            setInterval(() => {
-                const change = Math.floor(Math.random() * 5) - 2; // -2 to +2
-                count += change;
-                if(count < 15) count = 15;
-                if(count > 45) count = 45;
-                viewerEl.innerText = count;
-            }, 4000);
-        }
-
-        // [3] 실시간 알림 토스트 생성
-        const toastTexts = [
-            "김OO님(강남구) GOLD 회원권 상담 신청",
-            "이OO님(해운대구) 오사카 일정 3명 문의",
-            "박OO님 북해도 투어 모집 완료",
-            "최OO님 SILVER 잔여 구좌 긴급 확인",
-            "(주)OOTD 법인팀 상담 진행 중",
-            "정OO님 조난CC 부킹 가능 여부 확인",
-            "방금 전 익명의 회원님 가입 문의"
-        ];
-        
-        function createToast() {
-            const container = document.getElementById('toast-container');
-            const toast = document.createElement('div');
-            toast.className = 'notification-toast glass-card px-6 py-4 border-emerald-500/30 flex items-center gap-4 bg-black/60 shadow-2xl pointer-events-auto';
-            
-            const randomText = toastTexts[Math.floor(Math.random() * toastTexts.length)];
-            
-            toast.innerHTML = `
-                <div class="w-8 h-8 bg-emerald-600 rounded-full flex items-center justify-center flex-shrink-0">
-                    <i class="fa-solid fa-bell text-[10px] text-white animate-swing"></i>
-                </div>
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-brand-darkBrown/85 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-brand-white w-full max-w-lg rounded-3xl overflow-hidden border-2 border-brand-gold/40 shadow-2xl relative max-h-[92vh] flex flex-col">
+            <!-- Modal Header -->
+            <div class="p-8 border-b border-brand-softIvory bg-brand-ivory flex items-center justify-between">
                 <div>
-                    <p class="text-[11px] font-black text-white">${randomText}</p>
-                    <p class="text-[9px] text-emerald-400 font-bold uppercase mt-1 tracking-tighter">방금 전 • 실시간 업데이트</p>
+                    <h3 class="font-serif text-2xl tracking-wider text-brand-darkBrown font-bold">체험레슨 간편 신청</h3>
+                    <p class="text-xs text-brand-darkGold tracking-wider mt-1 font-extrabold">3D FITTRIX 분석이 무료 지원됩니다.</p>
                 </div>
-            `;
-            
-            container.appendChild(toast);
-            
-            setTimeout(() => {
-                toast.style.opacity = '0';
-                toast.style.transform = 'translateY(-20px)';
-                setTimeout(() => toast.remove(), 500);
-            }, 4000);
+                <button onclick="closeBookingModal()" class="w-10 h-10 rounded-full hover:bg-brand-softIvory transition-colors flex items-center justify-center text-brand-darkBrown" aria-label="Close modal">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Modal Form Scrollable Area -->
+            <div class="p-8 overflow-y-auto flex-1 font-bold">
+                <form id="lesson-form" onsubmit="submitLessonForm(event)" class="space-y-5">
+                    <!-- Client Name -->
+                    <div>
+                        <label class="block text-xs sm:text-sm font-extrabold text-brand-darkBrown tracking-wider mb-2">이름 *</label>
+                        <input type="text" required placeholder="신청인 성함을 적어주세요." 
+                               class="w-full text-sm px-4 py-3.5 rounded-xl border border-brand-gold/30 focus:outline-none focus:border-brand-darkGold bg-brand-ivory font-bold text-brand-darkBrown">
+                    </div>
+                    
+                    <!-- Phone Number -->
+                    <div>
+                        <label class="block text-xs sm:text-sm font-extrabold text-brand-darkBrown tracking-wider mb-2">연락처 *</label>
+                        <input type="tel" required placeholder="예: 010-1234-5678" 
+                               class="w-full text-sm px-4 py-3.5 rounded-xl border border-brand-gold/30 focus:outline-none focus:border-brand-darkGold bg-brand-ivory font-bold text-brand-darkBrown">
+                    </div>
+
+                    <!-- Program Selection -->
+                    <div>
+                        <label class="block text-xs sm:text-sm font-extrabold text-brand-darkBrown tracking-wider mb-2">희망 프로그램 *</label>
+                        <select required class="w-full text-sm px-4 py-3.5 rounded-xl border border-brand-gold/30 focus:outline-none focus:border-brand-darkGold bg-brand-ivory font-bold text-brand-darkBrown">
+                            <option value="">-- 체험레슨 희망 항목을 선택하세요 --</option>
+                            <option value="kids">[대치동 베스트] 키즈 키성장 및 척추교정</option>
+                            <option value="golf">[골프 특화] 비거리 및 고관절 컨디셔닝</option>
+                            <option value="prenatal">임산부 산전 필라테스</option>
+                            <option value="postnatal">산후 복직근이개 골반 회복</option>
+                            <option value="diet">다이어트 & 바디 라인 교정</option>
+                            <option value="mens">맨즈 필라테스 (코어 집중)</option>
+                        </select>
+                    </div>
+
+                    <!-- Booking Date & Time -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs sm:text-sm font-extrabold text-brand-darkBrown tracking-wider mb-2">희망 예약 일자 *</label>
+                            <input type="date" required 
+                                   class="w-full text-sm px-4 py-3.5 rounded-xl border border-brand-gold/30 focus:outline-none focus:border-brand-darkGold bg-brand-ivory font-bold text-brand-darkBrown">
+                        </div>
+                        <div>
+                            <label class="block text-xs sm:text-sm font-extrabold text-brand-darkBrown tracking-wider mb-2">희망 시간대 *</label>
+                            <select required class="w-full text-sm px-4 py-3.5 rounded-xl border border-brand-gold/30 focus:outline-none focus:border-brand-darkGold bg-brand-ivory font-bold text-brand-darkBrown">
+                                <option value="">시간대 선택</option>
+                                <option value="morning">오전 (09:00 - 12:00)</option>
+                                <option value="afternoon">오후 (12:00 - 18:00)</option>
+                                <option value="evening">저녁 (18:00 - 22:00)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Additional message textarea -->
+                    <div>
+                        <label class="block text-xs sm:text-sm font-extrabold text-brand-darkBrown tracking-wider mb-2">남기실 메시지 (현재 느끼는 통증 부위 등)</label>
+                        <textarea placeholder="불편한 허리, 고관절 부위나 자녀분 키성장 고민 등 상세히 기재해주시면 특별 관리에 적극 반영해 드립니다." rows="3" 
+                                  class="w-full text-sm px-4 py-3.5 rounded-xl border border-brand-gold/30 focus:outline-none focus:border-brand-darkGold bg-brand-ivory font-bold text-brand-darkBrown resize-none"></textarea>
+                    </div>
+
+                    <!-- Consent check -->
+                    <div class="flex items-start gap-3 pt-2">
+                        <input type="checkbox" required id="privacy" class="mt-1 w-4 h-4 border-brand-gold/50 accent-brand-darkGold">
+                        <label for="privacy" class="text-[11px] sm:text-xs text-brand-mutedBrown cursor-pointer select-none leading-relaxed">
+                            개인정보 수집 및 이용 동의 (예약 정보 제공 및 유선 전송 가이드 목적) *
+                        </label>
+                    </div>
+
+                    <!-- Submit trigger -->
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-brand-darkGold hover:bg-brand-darkBrown text-white font-extrabold tracking-widest text-sm py-4.5 rounded-xl shadow-lg shadow-brand-darkGold/20 transition-all duration-300">
+                            체험 예약 완료 신청하기
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Action Toast Notification System -->
+    <div id="success-toast" class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 bg-brand-darkBrown text-white border-2 border-brand-gold px-8 py-5 rounded-2xl shadow-2xl flex items-center gap-4 max-w-md w-[90%] scale-90 opacity-0 pointer-events-none transition-all duration-300">
+        <div class="w-12 h-12 rounded-full bg-brand-gold/20 text-brand-lightGold flex items-center justify-center text-xl flex-shrink-0">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <div>
+            <p class="text-sm font-extrabold tracking-wide text-brand-lightGold">체험레슨 신청이 완료되었습니다.</p>
+            <p class="text-xs text-brand-lightGray mt-1 font-bold">빠른 시간 내 담당 마스터 강사가 직접 전화를 드리겠습니다.</p>
+        </div>
+    </div>
+
+    <script>
+        // Global Header Scroll Effect
+        const header = document.getElementById('global-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 40) {
+                header.classList.remove('bg-brand-ivory/90');
+                header.classList.add('bg-brand-ivory/98', 'shadow-lg', 'border-brand-gold/30');
+            } else {
+                header.classList.add('bg-brand-ivory/90');
+                header.classList.remove('shadow-lg', 'border-brand-gold/30');
+            }
+        });
+
+        // Mobile Drawer Controller
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        let isMobileMenuOpen = false;
+
+        function toggleMobileMenu() {
+            isMobileMenuOpen = !isMobileMenuOpen;
+            if (isMobileMenuOpen) {
+                mobileMenu.classList.remove('translate-x-full');
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            } else {
+                mobileMenu.classList.add('translate-x-full');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            }
         }
 
-        // Initialize
-        window.onload = () => {
-            animateViewers();
-            // Start notifications after 2 seconds, repeat every 6 seconds
+        // Studio Horizontal Carousel logic
+        const track = document.getElementById('carousel-track');
+        let currentTranslate = 0;
+        
+        function nextSlide() {
+            const cardWidth = track.querySelector('div').getBoundingClientRect().width + 24; // card width + margin gap
+            const containerWidth = track.parentElement.getBoundingClientRect().width;
+            const scrollableWidth = track.scrollWidth - containerWidth;
+            
+            if (Math.abs(currentTranslate) < scrollableWidth) {
+                currentTranslate -= cardWidth;
+                if (Math.abs(currentTranslate) > scrollableWidth) {
+                    currentTranslate = -scrollableWidth;
+                }
+                track.style.transform = `translateX(${currentTranslate}px)`;
+            }
+        }
+
+        function prevSlide() {
+            const cardWidth = track.querySelector('div').getBoundingClientRect().width + 24; // card width + margin gap
+            if (currentTranslate < 0) {
+                currentTranslate += cardWidth;
+                if (currentTranslate > 0) {
+                    currentTranslate = 0;
+                }
+                track.style.transform = `translateX(${currentTranslate}px)`;
+            }
+        }
+
+        // Modal triggers
+        const modal = document.getElementById('booking-modal');
+        function openBookingModal() {
+            modal.classList.remove('hidden');
             setTimeout(() => {
-                createToast();
-                setInterval(createToast, 6000);
-            }, 2000);
-        };
+                modal.classList.remove('opacity-0');
+                modal.classList.add('opacity-100');
+            }, 50);
+        }
+
+        function closeBookingModal() {
+            modal.classList.remove('opacity-100');
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        // Toast Feedback System
+        function submitLessonForm(event) {
+            event.preventDefault();
+            closeBookingModal();
+            
+            const toast = document.getElementById('success-toast');
+            toast.classList.remove('scale-90', 'opacity-0', 'pointer-events-none');
+            toast.classList.add('scale-100', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('scale-100', 'opacity-100');
+                toast.classList.add('scale-90', 'opacity-0', 'pointer-events-none');
+            }, 5000);
+
+            document.getElementById('lesson-form').reset();
+        }
+
+        // Address Copy Utility with standard executive command fallback
+        function copyAddress() {
+            const addressText = "서울특별시 강남구 대치동 900-37 대동문구빌딩 B1";
+            const tempInput = document.createElement("input");
+            tempInput.value = addressText;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            
+            // Re-use toast with custom content for clipboard alert
+            const toast = document.getElementById('success-toast');
+            const originalTitle = toast.querySelector('p.font-extrabold').innerText;
+            const originalSub = toast.querySelector('p.text-xs').innerText;
+
+            toast.querySelector('p.font-extrabold').innerText = "주소가 복사되었습니다.";
+            toast.querySelector('p.text-xs').innerText = "원하시는 지도 앱에 편하게 붙여넣기 할 수 있습니다.";
+            
+            toast.classList.remove('scale-90', 'opacity-0', 'pointer-events-none');
+            toast.classList.add('scale-100', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('scale-100', 'opacity-100');
+                toast.classList.add('scale-90', 'opacity-0', 'pointer-events-none');
+                
+                // Restore default text
+                setTimeout(() => {
+                    toast.querySelector('p.font-extrabold').innerText = originalTitle;
+                    toast.querySelector('p.text-xs').innerText = originalSub;
+                }, 300);
+            }, 3500);
+        }
     </script>
+</body>
+</html>
