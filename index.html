@@ -1316,54 +1316,59 @@
     }
 
     // 6. [핵심] 실시간 알림 전송 및 폼 제출 시스템
-    async function submitLessonForm(event) {
-        event.preventDefault();
-        
-        // 폼 입력 데이터 수집
-        const name = document.getElementById('form-name').value;
-        const phone = document.getElementById('form-phone').value;
-        const programSelect = document.getElementById('form-program');
-        const programName = programSelect.options[programSelect.selectedIndex].text;
-        const timeRadio = document.querySelector('input[name="lesson_time"]:checked');
-        const selectedTime = timeRadio ? (timeRadio.value === '25min' ? '25분 (예약금 2만)' : '50분 (예약금 4만)') : '미선택';
-        const date = document.getElementById('form-date').value;
-        const slotSelect = document.getElementById('form-slot');
-        const slotName = slotSelect.options[slotSelect.selectedIndex].text;
-        const message = document.getElementById('form-message').value;
+    // 6. [보안 강화형 솔라피 문자 실시간 알림 전송 시스템]
+async function submitLessonForm(event) {
+    event.preventDefault();
+    
+    // 폼 입력 데이터 수집
+    const name = document.getElementById('form-name').value;
+    const phone = document.getElementById('form-phone').value;
+    const programSelect = document.getElementById('form-program');
+    const programName = programSelect.options[programSelect.selectedIndex].text;
+    const timeRadio = document.querySelector('input[name="lesson_time"]:checked');
+    const selectedTime = timeRadio ? (timeRadio.value === '25min' ? '25분 (예약금 1만)' : '50분 (예약금 2만)') : '미선택';
+    const date = document.getElementById('form-date').value;
+    const slotSelect = document.getElementById('form-slot');
+    const slotName = slotSelect.options[slotSelect.selectedIndex].text;
+    const message = document.getElementById('form-message').value;
 
-        // [대표진단 알림 자동화] 외부 웹훅 연동 영역 (Slack, Discord, 자체 메일러 등 연동 가능)
-        // 폰으로 실시간 즉각 알림을 쏘려면 아래 주석 처리된 fetch 구문에 실제 Webhook URL을 넣으시면 됩니다.
-        try {
-            /*
-            await fetch('https://hooks.slack.com/services/YOUR/WEBHOOK/URL', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    text: `🚨 [신규 체험수업 신청 알림] 🚨\n• 신청자: ${name}\n• 연락처: ${phone}\n• 프로그램: ${programName}\n• 선택 코스: ${selectedTime}\n• 희망 일정: ${date} / ${slotName}\n• 고객 메시지: ${message}`
-                })
-            });
-            */
-            console.log("관리자 실시간 전송 프로세스 작동 완료");
-        } catch (error) {
-            console.error("알림 발송 실패:", error);
-        }
-
-        // 프로세스 마무리: 모달 닫기 및 결과 토스트 팝업
-        closeBookingModal();
-        
-        const toast = document.getElementById('success-toast');
-        if (toast) {
-            toast.classList.remove('scale-90', 'opacity-0', 'pointer-events-none');
-            toast.classList.add('scale-100', 'opacity-100');
-
-            setTimeout(() => {
-                toast.classList.remove('scale-100', 'opacity-100');
-                toast.classList.add('scale-90', 'opacity-0', 'pointer-events-none');
-            }, 5500); // 인지율 확보를 위해 기존 5초에서 5.5초로 미세 조정
-        }
-
-        document.getElementById('lesson-form').reset();
+    // 🚀 [구글 우편함을 거쳐 솔라피로 안전하게 전송]
+    try {
+        await fetch('https://script.google.com/macros/s/AKfycbxAqASUnlZhZOAuWnQKYd-WIuieaO1Q0SOhfy2aX03yJkmg8AV_EPyOVBN07tdca3VO/exec', {
+            method: 'POST',
+            mode: 'no-cors', // 크로스 도메인 에러 방지
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name: name,
+                phone: phone,
+                program: programName,
+                time: selectedTime,
+                date: date,
+                slot: slotName,
+                message: message
+            })
+        });
+        console.log("문자 알림 요청 전송 완료");
+    } catch (error) {
+        console.error("알림 발송 실패:", error);
     }
+
+    // 프로세스 마무리: 모달 닫기 및 결과 토스트 팝업
+    closeBookingModal();
+    
+    const toast = document.getElementById('success-toast');
+    if (toast) {
+        toast.classList.remove('scale-90', 'opacity-0', 'pointer-events-none');
+        toast.classList.add('scale-100', 'opacity-100');
+
+        setTimeout(() => {
+            toast.classList.remove('scale-100', 'opacity-100');
+            toast.classList.add('scale-90', 'opacity-0', 'pointer-events-none');
+        }, 5500);
+    }
+
+    document.getElementById('lesson-form').reset();
+}
 
     // 7. 주소 복사 유틸리티
     function copyAddress() {
